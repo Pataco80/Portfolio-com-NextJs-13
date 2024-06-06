@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-pale-sky-900 text-pale-sky-100 min-h-[1500px];
+	}
+}
+
+.container {
+	@apply mx-auto w-full max-w-[1200px] px-4 sm:px-8;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	@apply bg-pale-sky rounded-[5px];
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-blue-ribbon rounded-[24px];
+}
