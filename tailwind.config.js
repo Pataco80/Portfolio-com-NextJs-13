@@ -48,6 +48,7 @@ module.exports = {
 			},
 			boxShadow: {
 				button: '0px 0px 68px 7px rgba(40,84,255, 0.4)',
+				image: '0px 0px 68px 7px rgba(40,84,255, 0.4)',
 			},
 		},
 	},
