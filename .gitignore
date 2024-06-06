@@ -88,5 +88,6 @@ typings/
 .dynamodb/
 
 # VS Code
-.vscode/
+.DS_Store
 .history/
+.vscode/
