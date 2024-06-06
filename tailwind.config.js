@@ -49,6 +49,7 @@ module.exports = {
 			boxShadow: {
 				button: '0px 0px 68px 7px rgba(40,84,255, 0.4)',
 				image: '0px 0px 68px 7px rgba(40,84,255, 0.4)',
+				knowteckscard: '0px 0px 15px 0px rgba(40,84,255, 0.4)',
 			},
 		},
 	},
