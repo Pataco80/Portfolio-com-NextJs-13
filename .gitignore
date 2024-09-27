@@ -34,8 +34,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Next Js
-/public
 
 # vs code
 .vscode/
