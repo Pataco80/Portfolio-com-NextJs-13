@@ -1,0 +1,19 @@
+{
+	"tech_badge": [
+		{
+			"name": "HTML/CSS"
+		},
+		{
+			"name": "JavaScript"
+		},
+		{
+			"name": "React"
+		},
+		{
+			"name": "Gatsby"
+		},
+		{
+			"name": "Next.js"
+		}
+	]
+}
