@@ -1,0 +1,28 @@
+{
+	"highlight_projects": [
+		{
+			"name": "BookWise",
+			"url": "https://portfolio-tutorial-2023.vercel.app/projects/book-wise",
+			"image": "default-1.jpg",
+			"altImage": "Image BookWise",
+			"description": "BookWise é uma plataforma de avaliação de livros que foi desenvolvida durante o bootcamp Ignite da Rocketseat. Com apenas um Figma precisávamos desenvolver essa aplicação completa Full Stack com Next.js.",
+			"techs": [
+				"Next.js",
+				"Next Auth",
+				"Stitches",
+				"Radix",
+				"TypeScript",
+				"Prisma",
+				"React Query"
+			]
+		},
+		{
+			"name": "TalentForge",
+			"url": "https://portfolio-tutorial-2023.vercel.app/projects/talent-forge",
+			"image": "default-2.jpeg",
+			"altImage": "Image TalentForge",
+			"description": "TalentForge é uma aplicação web que ajuda os candidatos a emprego a prepararem-se para entrevistas, gerando perguntas e respostas baseadas na posição a que se candidatam e nas competências necessárias.",
+			"techs": ["Nextjs", "Tailwind", "TypeScript", "Framer Motion"]
+		}
+	]
+}

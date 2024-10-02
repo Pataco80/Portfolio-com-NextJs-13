@@ -23,11 +23,11 @@ export const HeroSection = () => {
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
 							soluta itaque fugit eos quos adipisci.
 						</p>
-						<div className='flex gap-x-2 gap-y-3 flex-wrap max-w-[350px]'>
+						<ul className='flex gap-x-2 gap-y-3 flex-wrap max-w-[350px] list-none'>
 							{techBadgeData.tech_badge.map((item, index) => (
-								<TechBadge key={index} name={item.name} />
+								<li key={index}><TechBadge name={item.name} /></li>
 							))}
-						</div>
+						</ul>
 
 						<div className='mt-6 lg:mt-10 flex flex-col md:flex-row items-start md:items-center gap-3 sm:gap-5'>
 							<Button>
