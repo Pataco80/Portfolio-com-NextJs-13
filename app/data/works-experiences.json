@@ -1,0 +1,38 @@
+{
+	"works_experiences": [
+		{
+			"entreprise": "Entreprise 1",
+			"link":"https://www.linkedin.com/in/pataco80/",
+			"job": "Developpeur Frontend",
+			"time":"out 2022 • O momento • (1 ano e 11 meses)",
+			"image": "logo.svg",
+			"description": "Desenvolvimento e manutenção de interfaces utilizando React, Next, Tailwind, Typescript e Figma. Para o planejamento dos sprints, é utilizado o Jira.",
+			"techs": [
+				"Next.js",
+				"Next Auth",
+				"Stitches",
+				"Radix",
+				"TypeScript",
+				"Prisma",
+				"React Query"
+			]
+		},
+				{
+			"entreprise": "entreprise 2",
+			"link":"https://www.linkedin.com/in/pataco80/",
+			"job": "Developpeur Frontend",
+			"time":"out 2022 • O momento • (1 ano e 11 meses)",
+			"image": "logo.svg",
+			"description": "Desenvolvimento e manutenção de interfaces utilizando React, Next, Tailwind, Typescript e Figma. Para o planejamento dos sprints, é utilizado o Jira.",
+			"techs": [
+				"Next.js",
+				"Next Auth",
+				"Stitches",
+				"Radix",
+				"TypeScript",
+				"Prisma",
+				"React Query"
+			]
+		}
+	]
+}
