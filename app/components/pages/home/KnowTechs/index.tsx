@@ -1,5 +1,5 @@
 import React from 'react'
-import { SectionTitle } from '../../SectionTitle'
+import { SectionTitle } from '@/app/components/SectionTitle'
 import { KnowTechCard } from './KnowTechCard'
 import { TbBrandHtml5 } from 'react-icons/tb'
 import knowTechList from '@/app/data/know-techs-list'
