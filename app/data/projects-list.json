@@ -1,0 +1,41 @@
+{
+	"projects_list": [
+		{
+			"name": "BookWise",
+			"url": "/projects/book-wise",
+			"image": "default-1.jpg",
+			"altImage": "Image BookWise",
+			"description": "BookWise é uma plataforma de avaliação de livros que foi desenvolvida durante o bootcamp Ignite da Rocketseat. Com apenas um Figma precisávamos desenvolver essa aplicação completa Full Stack com Next.js.",
+			"techs": [
+				"Next.js",
+				"Next Auth",
+				"Stitches",
+				"Radix",
+				"TypeScript",
+				"Prisma",
+				"React Query"
+			],
+			"githubUrl":"https://www.github.com",
+			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/book-wise"
+		},
+		{
+			"name": "TalentForge",
+			"url": "/projects/talent-forge",
+			"image": "default-2.jpeg",
+			"altImage": "Image TalentForge",
+			"description": "TalentForge é uma aplicação web que ajuda os candidatos a emprego a prepararem-se para entrevistas, gerando perguntas e respostas baseadas na posição a que se candidatam e nas competências necessárias.",
+			"techs": ["Nextjs", "Tailwind", "TypeScript", "Framer Motion"],
+			"githubUrl":"https://www.github.com",
+			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/talent-forge"
+		},
+		{
+			"name": "Ignite Call",
+			"url": "/projects/ignite-call",
+			"image": "default-3.jpeg",
+			"altImage": "Image Ignite Call",
+			"description": "Este projeto foi desenvolvido durante o módulo 6 do bootcamp Ignite da Rocketseat. O projeto permite ao usuário criar uma conta e receber agendamentos no calendário usando a API do Google, um projeto semelhante ao Calendly.",
+			"techs": ["Nextjs", "Next Auth","React Query","Prisma", "TypeScript"],
+			"githubUrl":"https://www.github.com"
+		}
+	]
+}
