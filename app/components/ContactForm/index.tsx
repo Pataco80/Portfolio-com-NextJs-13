@@ -22,7 +22,7 @@ export const ContactForm = () => {
   const onSubmit = (data:ContactFormData) => console.log(data)
   
   return (
-    <section className='container py-16 md:py-32 flex flex-col items-center'>
+    <section id='contact-form' className='container py-16 md:py-32 flex flex-col items-center'>
       <SectionTitle title='Prenez contact avec moi' subtitle='contact' className='text-center items-center'/>
       <form onSubmit={handleSubmit(onSubmit)} className='mt-12 w-full max-w-[450px] flex flex-col gap-6' action="">
         <input type='text' placeholder='Nom' className='w-full h-11 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-500 text-pale-sky-50 focus:outline-none focus:ring-2 ring-blue-ribbon' {...register('name')}/>

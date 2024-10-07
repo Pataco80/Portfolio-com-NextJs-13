@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import { TechBadge } from '@/app/components/TechBadge'
 import { Button } from '@/app/components/Button'
@@ -6,6 +7,10 @@ import techBadgeData from '@/app/data/tech-badge.json'
 import { SocialIcons } from '@/app/components/SocialIcons'
 
 export const HeroSection = () => {
+	const handleContact = () => {
+		const contactSection = document.querySelector('#contact-form')
+		contactSection ? contactSection.scrollIntoView({behavior:'smooth'}):null
+	}
 	return (
 		<>
 			<section className='w-full lg:h-[800px] bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end py-32 pb-10 sm:pb-32 lg:pb-[110px]'>
@@ -30,7 +35,7 @@ export const HeroSection = () => {
 						</ul>
 
 						<div className='mt-6 lg:mt-10 flex flex-col md:flex-row items-start md:items-center gap-3 sm:gap-5'>
-							<Button>
+							<Button onClick={handleContact}>
 								Contactez-moi
 								<HiArrowNarrowRight size={18} />
 							</Button>
