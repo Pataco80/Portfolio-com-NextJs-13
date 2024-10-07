@@ -16,7 +16,17 @@
 				"React Query"
 			],
 			"githubUrl":"https://www.github.com",
-			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/book-wise"
+			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/book-wise",
+			"gallery":[
+				{
+					"title":"Home Page BookWise",
+					"image":"default-1.jpg"
+				},
+				{
+					"title":"Login BookWise",
+					"image":"default-2.jpg"
+				}
+			]
 		},
 		{
 			"name": "TalentForge",
@@ -26,7 +36,17 @@
 			"description": "TalentForge é uma aplicação web que ajuda os candidatos a emprego a prepararem-se para entrevistas, gerando perguntas e respostas baseadas na posição a que se candidatam e nas competências necessárias.",
 			"techs": ["Nextjs", "Tailwind", "TypeScript", "Framer Motion"],
 			"githubUrl":"https://www.github.com",
-			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/talent-forge"
+			"liveUrl":"https://portfolio-tutorial-2023.vercel.app/projects/talent-forge",
+			"gallery":[
+				{
+					"title":"Home Page TalentForge",
+					"image":"default-1.jpg"
+				},
+				{
+					"title":"Login TalentForge",
+					"image":"default-2.jpg"
+				}
+			]
 		},
 		{
 			"name": "Ignite Call",
@@ -35,7 +55,17 @@
 			"altImage": "Image Ignite Call",
 			"description": "Este projeto foi desenvolvido durante o módulo 6 do bootcamp Ignite da Rocketseat. O projeto permite ao usuário criar uma conta e receber agendamentos no calendário usando a API do Google, um projeto semelhante ao Calendly.",
 			"techs": ["Nextjs", "Next Auth","React Query","Prisma", "TypeScript"],
-			"githubUrl":"https://www.github.com"
+			"githubUrl":"https://www.github.com",
+			"gallery":[
+				{
+					"title":"Home Page Ignite Call",
+					"image":"default-1.jpg"
+				},
+				{
+					"title":"Login Ignite Call",
+					"image":"default-2.jpg"
+				}
+			]
 		}
 	]
 }
