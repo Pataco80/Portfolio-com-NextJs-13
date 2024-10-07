@@ -4,6 +4,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from '@/app/components/Header'
 import { Footer } from '@/app/components/Footer'
+import { BackToTop } from '@/app/components/BackToTop'
 
 const inter = Inter({
 	variable: '--font-inter',
@@ -30,7 +31,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body>
 				<Header />
 				{children}
-				<Footer/>
+				<Footer />
+				<BackToTop/>
 			</body>
 		</html>
 	)

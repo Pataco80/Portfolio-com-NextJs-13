@@ -14,7 +14,7 @@ export const Header = () => {
 		},
 	]
 	return (
-		<header className='absolute top-0 w-full z-10 h-24 flex justify-between items-center'>
+		<header id='header' className='absolute top-0 w-full z-10 h-24 flex justify-between items-center'>
 			<div className='container flex items-center justify-between'>
 				<Link href='/'>
 					<Image
