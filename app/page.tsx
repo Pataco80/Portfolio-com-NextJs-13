@@ -30,6 +30,7 @@ query MyQuery {
       textAlt
       url
     }
+
   }
   }
 }
@@ -43,7 +44,7 @@ export default async function Home() {
 	return (
 		<>
 			<HeroSection homeInfo={pageData}/>
-      <KnowTechs />
+      <KnowTechs knownTechData={pageData.knownTechs} />
       <HighlightedProjects />
 			<WorkExperience />
 		</>
