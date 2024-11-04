@@ -16,6 +16,7 @@ export type HomePageInfo = {
   }
   socials: Social[]
   knownTechs: knownTech[]
+  highlightProjects:Project[]
 }
 
 export type HomePageData = {

@@ -2,31 +2,20 @@ import React from 'react'
 import Image from 'next/image'
 import { TechBadge } from '@/app/components/TechBadge'
 import { Link } from '@/app/components/Link'
-import { HiArrowNarrowRight } from 'react-icons/hi'
+import { LuArrowRight } from 'react-icons/lu'
+import { Project } from '@/app/types/projects'
 
 type HighlightCardProps = {
-	name: string
-	image: string
-	altImage: string
-	description: string
-	url: string
-	techs: string[]
+	project:Project
 }
 
-export const HighlightCard = ({
-	name,
-	image,
-	altImage,
-	description,
-	url,
-	techs,
-}: HighlightCardProps) => {
+export const HighlightCard = ({project}: HighlightCardProps) => {
 	return (
 		<article className='flex flex-col lg:flex-row gap-6 lg:gap-12'>
 			<div className='w-full h-full'>
 				<Image
-					src={`/images/projects/${image}`}
-					alt={altImage}
+					src={project.pageThumbnail.url}
+					alt={project.pageThumbnail.textAlt}
 					width={400}
 					height={300}
 					className='w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg'
@@ -40,17 +29,17 @@ export const HighlightCard = ({
 						width={20}
 						height={20}
 					/>
-					{name}
+					{project.title}
 				</h3>
-				<p className='text-pale-sky-400 my-6'>{description}</p>
+				<p className='text-pale-sky-400 my-6'>ProjectDescription rich text here</p>
 				<ul className='flex flex-wrap gap-x-2 gap-y-3 mb-8 lg:max-w-[350px]'>
-					{techs.map((item, index) => {
-						return <li key={index}><TechBadge name={item} /></li>
+					{project.technology.map((item, index) => {
+						return <li key={index}><TechBadge name={item.name} /></li>
 					})}
 				</ul>
-				<Link href={url}>
+				<Link href={project.slug}>
 					Voir le projet
-					<HiArrowNarrowRight />
+					<LuArrowRight />
 				</Link>
 			</div>
 		</article>

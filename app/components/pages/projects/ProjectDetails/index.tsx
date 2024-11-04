@@ -3,8 +3,7 @@ import { Link } from '@/app/components/Link';
 import { SectionTitle } from '@/app/components/SectionTitle'
 import { TechBadge } from '@/app/components/TechBadge'
 import React from 'react'
-import { HiArrowNarrowLeft } from 'react-icons/hi';
-import { TbBrandGithub, TbGlobe } from 'react-icons/tb';
+import { LuGithub, LuGlobe,LuArrowLeft } from 'react-icons/lu';
 
 
 
@@ -24,15 +23,15 @@ export const ProjectDetails = () => {
       <div className='w-full my-6 sm:my-12 flex flex-col sm:flex-row items-center justify-center gap-4'>
         <a href="#" target='_blank'>
           <Button className='min-w-[180px]'>
-            <TbBrandGithub size={20}/>Link github</Button>
+            <LuGithub size={20}/>Link github</Button>
         </a>
         <a href="#" target='_blank'>
           <Button className='min-w-[180px]'>
-            <TbGlobe size={20}/>Link github</Button>
+            <LuGlobe size={20}/>Link github</Button>
         </a>
       </div>
       <Link href="/projects">
-      <HiArrowNarrowLeft size={20}/>Voir tous les projets</Link>
+      <LuArrowLeft size={20}/>Voir tous les projets</Link>
     </section>
   )
 }

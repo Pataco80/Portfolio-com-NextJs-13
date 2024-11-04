@@ -30,7 +30,30 @@ query MyQuery {
       textAlt
       url
     }
-
+    highlightProjects {
+      slug
+      title
+      thumbnail {
+        url
+        textAlt
+      }
+      shortDescription
+      description {
+        raw
+      }
+      technology {
+        name
+      }
+      gitHubUrl
+      liveProjectUrl
+      sections {
+        title
+        image {
+          url
+          textAlt
+        }
+      }
+    }
   }
   }
 }
@@ -45,7 +68,7 @@ export default async function Home() {
 		<>
 			<HeroSection homeInfo={pageData}/>
       <KnowTechs knownTechData={pageData.knownTechs} />
-      <HighlightedProjects />
+      <HighlightedProjects projects={pageData.highlightProjects} />
 			<WorkExperience />
 		</>
 	)
