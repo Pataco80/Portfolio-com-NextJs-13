@@ -3,38 +3,50 @@ import { KnowTechs } from '@/app/components/pages/home/KnowTechs'
 import { HighlightedProjects } from '@/app/components/pages/home/HighlightedProjects'
 import { WorkExperience } from '@/app/components/pages/home/WorkExperience'
 import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
+import {HomePageData} from '@/app/types/page-info'
 
-const getPageData = async () => {
+export const getPageData = async():Promise<HomePageData> => {
 	const query = `
-		query homePageData {
-  		pages(where: {slug: "home"}) {
-    		introduction {
-      		raw
-    		}
-    		knownTechs {
-      		iconSvg
-      		name
-      		startDate
-    		}
-    		technologies {
-      		name
-    		}
-  		}
-		}
+query MyQuery {
+  page(where: {slug: "home"}) {
+    introduction {
+      raw
+    }
+    knownTechs(orderBy: startDate_ASC) {
+      iconSvg
+      name
+      startDate
+    }
+    socials {
+      iconSvg
+      name
+    }
+    technologies(orderBy: startDate_ASC) {
+      name
+      iconSvg
+      startDate
+    }
+    profilePicture {
+      textAlt
+      url
+    }
+  }
+  }
+}
 	`
-
 	return fetchHygraphQuery(query)
 }
 
 export default async function Home() {
-	const response = await getPageData()
-	console.log(response)
+  const {page:pageData} = await getPageData()
+  console.log(pageData)
 	return (
 		<>
-			<HeroSection />
-			<KnowTechs />
-			<HighlightedProjects />
+			<HeroSection homeInfo={pageData}/>
+      <KnowTechs />
+      <HighlightedProjects />
 			<WorkExperience />
 		</>
 	)
 }
+
