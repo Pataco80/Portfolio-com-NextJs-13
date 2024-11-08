@@ -1,5 +1,7 @@
+// Imports GraphCMS types
 import { RichTextContent } from '@graphcms/rich-text-types'
 
+// Types Props
 export type knownTech = {
   iconSvg: string,
   name: string,
@@ -14,6 +16,7 @@ export type ProjectSection = {
   }
 }
 
+// Export global projects types
 export type Project = {
   slug: string,
   title:string,
@@ -27,7 +30,7 @@ export type Project = {
   },
   liveProjectUrl?:string,
   gitHubUrl?:string,
-  technology: knownTech[],
+  technologies: knownTech[],
   pageThumbnail: {
     url:string,
     textAlt: string,

@@ -1,5 +1,11 @@
-import {knownTech, Project} from '@/app/types/projects'
+// Import plugins types
 import { RichTextContent } from '@graphcms/rich-text-types'
+
+// Import files from types
+import { knownTech, Project } from '@/app/types/projects'
+import { WorkExperience } from '@/app/types/works-experience'
+
+// Types
 export type Social = {
   iconSvg:string,
   url:string
@@ -16,9 +22,11 @@ export type HomePageInfo = {
   }
   socials: Social[]
   knownTechs: knownTech[]
-  highlightProjects:Project[]
+  highlightProjects: Project[]
+  workExperience:WorkExperience[]
 }
 
+// Export global page types
 export type HomePageData = {
   page:HomePageInfo
 }
