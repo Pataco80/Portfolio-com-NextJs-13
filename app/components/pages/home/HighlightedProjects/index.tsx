@@ -1,21 +1,22 @@
-import React from 'react'
+// Imports Components
 import { SectionTitle } from '@/app/components/SectionTitle'
 import { DividerHorizontal } from '@/app/components/DividerLine'
 import { HighlightCard } from './HighlightCard'
 import { Link } from '@/app/components/Link'
-import data from '@/app/data/highlight-projects.json'
 import { LuArrowRight } from 'react-icons/lu'
+
+// Imports types
 import { Project } from '@/app/types/projects'
 
+// Types Props
 type HighlightedProjectsProps = {
 	projects:Project[]
 }
 
+// Component
+export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
 
-
-export const HighlightedProjects = ({projects}:HighlightedProjectsProps) => {
-	console.log(projects)
-	const projectsList = data.highlight_projects
+	// JSX Component
 	return (
 		<section className='container py-16'>
 			<SectionTitle title='Projets en vedette' subtitle="highlight's" />
@@ -28,22 +29,6 @@ export const HighlightedProjects = ({projects}:HighlightedProjectsProps) => {
 					</div>
 				)
 			})}
-			{/*projectsList.map((item, index) => {
-				return (
-					<>
-						<HighlightCard
-							key={index}
-							name={item.name}
-							image={item.image}
-							altImage={item.altImage}
-							url={item.url}
-							description={item.description}
-							techs={item.techs}
-						/>
-						<DividerHorizontal className='my-16' />
-					</>
-				)
-			})*/}
 			<p className='flex items-center gap-1.5'>
 				<span className='text-pale-sky-400'>Si intéressé ?</span>
 				<Link className='inline-flex' href='/projects'>
