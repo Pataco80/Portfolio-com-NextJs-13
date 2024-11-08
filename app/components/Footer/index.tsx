@@ -1,8 +1,11 @@
-import React from 'react'
+// Imports Components
 import { ContactForm } from '@/app/components/ContactForm'
 import { HiHeart } from "react-icons/hi";
 
+// Component
 export const Footer = () => {
+
+	// JSX Component
   return (
     <footer className='flex flex-col items-center bg-pale-sky-950'>
       <ContactForm />

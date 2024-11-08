@@ -1,3 +1,4 @@
+// Function fetching fetchHygraph Queries
 export const fetchHygraphQuery = async (query: string) => {
   const response = await fetch(process.env.HYGRAPH_URL!, {
     method: 'POST',

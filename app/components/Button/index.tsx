@@ -1,8 +1,16 @@
-import { cn } from '@/app/lib/utils'
+// Imports React
 import React, { ButtonHTMLAttributes } from 'react'
 
+// Imports Utils for TailwindCSS
+import { cn } from '@/app/lib/utils'
+
+// Types Props
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+
+// Component
 export const Button = ({ children, className, ...props }: ButtonProps) => {
+
+	// JSX Component
 	return (
 		<button
 			{...props}

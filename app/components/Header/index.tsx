@@ -1,8 +1,15 @@
 'use client'
+
+// Imports Next plugins
 import Link from 'next/link'
 import Image from 'next/image'
+
+// Imports Components
 import { NavItem } from './NavItem'
+
 export const Header = () => {
+
+	// Components items links
 	const NAV_ITEMS = [
 		{
 			label: 'Home',
@@ -13,6 +20,8 @@ export const Header = () => {
 			href: '/projects',
 		},
 	]
+
+	// JSX Component
 	return (
 		<header id='header' className='absolute top-0 w-full z-10 h-24 flex justify-between items-center'>
 			<div className='container flex items-center justify-between'>

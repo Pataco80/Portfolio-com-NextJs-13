@@ -1,13 +1,15 @@
-import { Button } from '@/app/components/Button'
-import { Link } from '@/app/components/Link';
+// Imports Components
 import { SectionTitle } from '@/app/components/SectionTitle'
+import { Link } from '@/app/components/Link';
+import { Button } from '@/app/components/Button'
 import { TechBadge } from '@/app/components/TechBadge'
-import React from 'react'
 import { LuGithub, LuGlobe,LuArrowLeft } from 'react-icons/lu';
 
 
-
+// Component
 export const ProjectDetails = () => {
+
+	// JSX Component
   return (
     <section className='w-full sm:min-h-[750px] relative flex flex-col items-center justify-end pb-10 sm:pb-24 px-6 py-24'>
       <div className='absolute inset-0 z-[-1]' style={{ background: 'url(/images/bg-portfolio-hero.webp) no-repeat right bottom/cover, url(/images/projects/default-1.jpg) no-repeat center/cover' }} />

@@ -1,15 +1,17 @@
-import React from 'react'
+// Imports Components
 import { SectionTitle } from '@/app/components/SectionTitle'
 import { KnowTechCard } from './KnowTechCard'
-import { TbBrandHtml5 } from 'react-icons/tb'
 import { knownTech } from '@/app/types/projects'
 
+// Types Props
 type knownTechProps = {
 	knownTechData:knownTech[]
 }
 
-
+// Component
 export const KnowTechs = ({ knownTechData }: knownTechProps) => {
+
+	// JSX Component
 	return (
 		<section className='container py-16'>
 			<SectionTitle title='Mes Connaissances' subtitle='compétences' />

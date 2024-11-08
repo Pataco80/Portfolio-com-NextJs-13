@@ -1,12 +1,16 @@
 'use client'
-import {useState,useEffect, useCallback} from 'react'
+
+// Imports React
+import { useState, useEffect, useCallback } from 'react'
+
+// Imports Components
 import {Button} from '@/app/components/Button'
 import { HiArrowNarrowUp } from 'react-icons/hi'
 
-
-
+// Component
 export const BackToTop = () => {
-
+	
+  // Components Functions
   const [visible, setVisible] = useState(false);
 
   // Show Button After Scrolling Down More than 500px
@@ -37,6 +41,7 @@ export const BackToTop = () => {
     });
   }
 
+	// JSX Component
   return (
     <Button className={!visible?`opacity-0 duration-500 transition-all`:`fixed bottom-6 right-6 p-2 opacity-100 duration-300 transition-all shadow-button`} onClick={handleScroll}>
       <HiArrowNarrowUp size={20}/>

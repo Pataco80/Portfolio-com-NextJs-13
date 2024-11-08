@@ -1,7 +1,8 @@
-import React from 'react'
+// Imports Next plugins
 import Image from 'next/image'
 import Link from 'next/link'
-const image = ''
+
+// Types Props
 type ProjectCardProps = {
   name: string,
   url: string,
@@ -13,7 +14,10 @@ type ProjectCardProps = {
   liveUrl?:string
 }
 
+// Component
 export const ProjectCard = ({ name, url, image, altImage, description, techs }: ProjectCardProps) => {
+
+	// JSX Component
   return (
     <Link href={url}>
       <article className='group h-[450px] flex flex-col bg-pale-sky-800 border-2 border-pale-sky-800 transition-all hover:border-blue-ribbon opacity-70 hover:opacity-100 rounded-lg overflow-hidden'>

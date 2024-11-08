@@ -1,9 +1,19 @@
-import NextLink from 'next/link'
+// Imports React
 import { ComponentProps } from 'react'
+
+// Imports Next plugins
+import NextLink from 'next/link'
+
+// Imports TailwindCSS utilities
 import { cn } from '@/app/lib/utils'
+
+// Types Props
 type LinkProps = ComponentProps<typeof NextLink>
 
+// Component
 export const Link = ({ children, className, ...props }: LinkProps) => {
+
+	// JSX Component
 	return (
 		<NextLink
 			className={cn(

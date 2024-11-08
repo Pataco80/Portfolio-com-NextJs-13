@@ -1,6 +1,7 @@
+// Imports Next plugins
 import Image from 'next/image'
-import React from 'react'
 
+// Datas
 const sections = [
   {
 					"title":"Home Page BookWise",
@@ -12,7 +13,10 @@ const sections = [
 				}
 ]
 
+// Component
 export const ProjectSection = () => {
+
+	// JSX Component
   return (
     <section className='container my-12 md:my-32 flex flex-col gap-8 md:gap-32'>
       {

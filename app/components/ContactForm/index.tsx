@@ -1,26 +1,35 @@
 'use client'
+
+// Imports Form plugins
+import {useForm} from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+// Imports Components
 import { SectionTitle } from '../SectionTitle'
 import { Button } from '../Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
-import {useForm} from 'react-hook-form'
-import { z } from 'zod'
-import {zodResolver} from '@hookform/resolvers/zod'
+
+// Component
 export const ContactForm = () => {
-  
+  // Form Schema for create types
   const ContactFormSchema = z.object({
     name:z.string().min(3).max(20),
     email:z.string().email(),
     message:z.string().min(1).max(500),
   })
   
+  // Types Props
   type ContactFormData = z.infer<typeof ContactFormSchema>
   
+  // Components Functions
   const { register, handleSubmit } = useForm<ContactFormData>({
     resolver: zodResolver(ContactFormSchema)
   })
   
   const onSubmit = (data:ContactFormData) => console.log(data)
   
+	// JSX Component
   return (
     <section id='contact-form' className='container py-16 md:py-32 flex flex-col items-center'>
       <SectionTitle title='Prenez contact avec moi' subtitle='contact' className='text-center items-center'/>
