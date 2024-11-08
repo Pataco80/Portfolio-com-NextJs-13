@@ -1,11 +1,19 @@
-import React from 'react'
+// Imports Components
 import { SectionTitle } from '@/app/components/SectionTitle'
-import { WorkExperienceItem } from './WorkExperienceItem'
-import data from '@/app/data/works-experiences.json'
+import { WorkExperienceItem } from '@/app/components/pages/home/WorkExperience/WorkExperienceItem'
 
-export const WorkExperience = () => {
-	const worksList = data.works_experiences
+// Imports types
+import { WorkExperience as Works } from '@/app/types/works-experience'
+
+// Types Props
+type WorkExperienceProps = {
+	workExperience:Works[]
+}
+
+// Component
+export const WorkExperience = ({workExperience}:WorkExperienceProps) => {
 	return (
+		// JSX Component
 		<section className='container flex flex-col md:flex-row gap-8 lg:gap-10 py-16'>
 			<article className='max-w-[450px] md:max-w-[300px] lg:max-w-[450px]'>
 				<SectionTitle
@@ -20,10 +28,10 @@ export const WorkExperience = () => {
 			</article>
 			<div className='flex flex-col gap-8'>
 				{
-					worksList.map((item, index) => {
-						return <WorkExperienceItem key={index} enterprise={item.entreprise} link={item.link} job={item.job} time={item.time} description={item.description} techs={item.techs} image={item.image} />
+					workExperience.map((work) => {
+						return <WorkExperienceItem key={work.compagnyName} work={work} />
 					})
-				}				
+				}
 			</div>
 		</section>
 	)
