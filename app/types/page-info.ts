@@ -11,6 +11,10 @@ export type Social = {
   url:string
 }
 
+export type ProjectsPageData = {
+  projects:Project[]
+}
+
 export type HomePageInfo = {
   introduction: {
     raw:RichTextContent
