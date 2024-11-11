@@ -33,7 +33,6 @@ export const getPageData = async ():Promise<ProjectsPageData> => {
 // Component
 export default async function Projects() {
   const { projects } = await getPageData();
-  console.log(projects)
 
   // JSX Component
   return (

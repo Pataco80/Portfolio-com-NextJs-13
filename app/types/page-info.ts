@@ -15,6 +15,10 @@ export type ProjectsPageData = {
   projects:Project[]
 }
 
+export type ProjectPageData = {
+  project: Project
+}
+
 export type HomePageInfo = {
   introduction: {
     raw:RichTextContent
