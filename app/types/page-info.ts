@@ -15,6 +15,16 @@ export type ProjectsPageData = {
   projects:Project[]
 }
 
+export type ProjectPageData = {
+  project: Project
+}
+
+export type ProjectsPageStaticData = {
+  projects: {
+    slug: string
+  }[]
+}
+
 export type HomePageInfo = {
   introduction: {
     raw:RichTextContent
@@ -29,6 +39,8 @@ export type HomePageInfo = {
   highlightProjects: Project[]
   workExperience:WorkExperience[]
 }
+
+
 
 // Export global page types
 export type HomePageData = {

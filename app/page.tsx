@@ -12,72 +12,59 @@ import {HomePageData} from '@/app/types/page-info'
 
 export const getPageData = async():Promise<HomePageData> => {
 	const query = `
-    query MyQuery {
-      page(where: {slug: "home"}) {
-        introduction {
-          raw
-        }
-        knownTechs(orderBy: startDate_ASC) {
-          iconSvg
-          name
-          startDate
-        }
-        socials {
-          iconSvg
-          name
-        }
-        technologies(orderBy: startDate_ASC) {
-          name
-          iconSvg
-          startDate
-        }
-        profilePicture {
-          textAlt
-          url
-        }
-        highlightProjects {
-          slug
-          title
-          thumbnail {
-            url
-            textAlt
-          }
-          shortDescription
-          description {
-            raw
-          }
-          technologies {
-            name
-          }
-          gitHubUrl
-          liveProjectUrl
-          sections {
-            title
-            image {
-              url
-              textAlt
-            }
-          }
-        }
-        workExperience {
-          compagnyName
-          compagnyUrl
-          compagnyLogo {
-            url
-            textAlt
-          }
-          role
-          description {
-            raw
-          }
-          startDate
-          endDate
-          technologies {
-            name
-          }
-        }
+query MyQuery {
+  page(where: {slug: "home"}) {
+    title
+    slug
+    introduction {
+      raw
+    }
+    socials {
+      iconSvg
+      url
+    }
+    technologies {
+      name
+    }
+    profilePicture {
+      url
+      textAlt
+    }
+    knownTechs {
+      name
+      iconSvg
+      startDate
+    }
+    highlightProjects {
+      title
+      slug
+      thumbnail{
+        url
+        textAlt
+      }
+      shortDescription
+      technologies{
+        name
       }
     }
+    workExperience {
+      compagnyName
+      compagnyUrl
+      compagnyLogo{
+        url
+        textAlt
+      }
+      description{
+        raw
+      }
+      startDate
+      endDate
+      technologies{
+        name
+      }
+    }
+  }
+}
 	`
 	return fetchHygraphQuery(query)
 }

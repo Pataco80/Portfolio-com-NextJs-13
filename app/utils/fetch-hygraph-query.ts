@@ -1,18 +1,29 @@
-// Function fetching fetchHygraph Queries
-export const fetchHygraphQuery = async (query: string) => {
+export const fetchHygraphQuery = async <T>(
+  query: string,
+  revalidate?: number,
+): Promise<T> => {
   const response = await fetch(process.env.HYGRAPH_URL!, {
     method: 'POST',
     headers: {
-      'Content-Type':'application/json',
+      'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization:`Bearer ${process.env.HYGRAPH_TOKEN}`
+      Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
     },
-    body: JSON.stringify({ query }),
     next: {
-      revalidate: 60 * 60 * 24
-    }
+      revalidate,
+    },
+    body: JSON.stringify({
+      query,
+    }),
   })
-  const { data } = await response.json()
 
-  return data
+  const json = await response.json()
+
+  if (!json.data) {
+    console.error('Hygraph query error:', JSON.stringify(json, null, 2))
+    console.error('HYGRAPH_URL set:', !!process.env.HYGRAPH_URL)
+    console.error('HYGRAPH_TOKEN set:', !!process.env.HYGRAPH_TOKEN)
+  }
+
+  return json.data
 }
