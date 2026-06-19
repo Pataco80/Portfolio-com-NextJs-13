@@ -19,10 +19,10 @@ export const RichText = ({ ...props }: RichTextProps) => {
           <p className="font-medium my-6">{children}</p>
         ),
         bold: ({ children }) => (
-          <b className="font-medium">{children}</b>
+          <b className="font-semibold text-pale-sky-50">{children}</b>
         ),
         ul: ({ children }) => (
-          <ul className="list-disc list-inside pl-2 flex flex-col gap-1">
+          <ul className="list-disc list-inside pl-2 flex flex-col gap-1 -mt-3 marker:text-blue-ribbon-400">
             {children}
           </ul>
         ),
