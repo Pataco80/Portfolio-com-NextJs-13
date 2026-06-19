@@ -29,8 +29,16 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 
 	// JSX Component
 	return (
-			<section className='w-full lg:h-[1050px] bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end py-32 pb-10 sm:pb-32 lg:pb-[110px]'>
-				<div className='container flex justify-between flex-col-reverse lg:flex-row gap-20 lg:gap-8'>
+			<section className='relative overflow-hidden w-full lg:h-[1050px] bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end py-32 pb-10 sm:pb-32 lg:pb-[110px]'>
+				<div
+					aria-hidden
+					className='pointer-events-none absolute inset-0 z-0'
+					style={{
+						background:
+							'radial-gradient(900px circle at 50% 28%, rgba(0,85,255,0.30) 0%, transparent 55%), radial-gradient(650px circle at 80% 52%, rgba(0,85,255,0.18) 0%, transparent 60%), linear-gradient(to bottom, rgba(0,5,16,0.65) 0%, rgba(0,13,42,0.30) 40%, rgba(0,19,64,0.88) 100%)',
+					}}
+				/>
+				<div className='relative z-10 container flex justify-between flex-col-reverse lg:flex-row gap-20 lg:gap-8 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)]'>
 					<div className='w-full lg:max-w-[550px]'>
 						<Image
 							src='/images/logos/logo-dwdevelopment.webp'
