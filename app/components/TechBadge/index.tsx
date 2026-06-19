@@ -8,7 +8,7 @@ export const TechBadge = ({ name }: TechBadgeProps) => {
 
 	// JSX Component
 	return (
-		<span className='text-blue-ribbon-300 bg-blue-ribbon-700/80 px-2 py-1 rounded-lg'>
+		<span className='text-blue-ribbon-200 bg-blue-ribbon-700 px-2 py-1 rounded-lg'>
 			{name}
 		</span>
 	)

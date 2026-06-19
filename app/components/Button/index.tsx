@@ -15,7 +15,7 @@ export const Button = ({ children, className, ...props }: ButtonProps) => {
 		<button
 			{...props}
 			className={cn(
-				'bg-blue-ribbon-800 text-pale-sky-300 px-4 py-3 flex items-center gap-3 rounded-lg shadow-button hover:bg-blue-ribbon-500 transition-all disabled:opacity-50',
+				'bg-blue-ribbon-800 text-white px-4 py-3 flex items-center gap-3 rounded-lg shadow-button hover:bg-blue-ribbon-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pale-sky-900 transition-all disabled:opacity-50',
 				className
 			)}>
 			{children}

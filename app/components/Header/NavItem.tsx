@@ -24,10 +24,10 @@ export const NavItem = ({ label, href }: NavItemProps) => {
 			<Link
 				href={href}
 				className={cn(
-					'text-pale-sky-400 hover:text-blue-ribbon',
+					'text-pale-sky-300 hover:text-blue-ribbon-400 transition-colors',
 					isActive && 'text-pale-sky-50'
 				)}>
-				<span className='text-blue-ribbon mr-1'>#</span>
+				<span className='text-blue-ribbon-400 mr-1'>#</span>
 				{label}
 			</Link>
 		</li>

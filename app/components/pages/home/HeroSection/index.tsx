@@ -49,7 +49,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 						/>
 						<p className='text-sm sm:text-base text-blue-ribbon-300 mb-4'>Bonjour je m&apos;appèle</p>
 						<h2 className='font-mono text-xl sm:text-2xl md:text-3xl'>Ricardo Do Vale</h2>
-						<div className='my-8 text-pale-sky-500 text-sm sm:text-base'>
+						<div className='my-8 text-pale-sky-400 text-sm sm:text-base'>
 						<RichText content={homeInfo.introduction.raw}/>
 						</div>
 						<ul className='mt-5 flex gap-x-2 gap-y-3 flex-wrap max-w-[350px] list-none'>
