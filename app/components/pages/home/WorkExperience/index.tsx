@@ -26,7 +26,7 @@ export const WorkExperience = ({workExperience}:WorkExperienceProps) => {
 					Laboriosam, aperiam?
 				</p>
 			</article>
-			<div className='flex flex-col gap-8'>
+			<div className='flex flex-col gap-12 lg:gap-16'>
 				{
 					workExperience.map((work) => {
 						return <WorkExperienceItem key={work.compagnyName} work={work} />
