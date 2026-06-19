@@ -34,11 +34,11 @@ export const ContactForm = () => {
     <section id='contact-form' className='container py-16 md:py-32 flex flex-col items-center'>
       <SectionTitle title='Prenez contact avec moi' subtitle='contact' className='text-center items-center'/>
       <form onSubmit={handleSubmit(onSubmit)} className='mt-12 w-full max-w-[450px] flex flex-col gap-6' action="">
-        <input type='text' placeholder='Nom' className='w-full h-11 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-500 text-pale-sky-50 focus:outline-none focus:ring-2 ring-blue-ribbon' {...register('name')}/>
+        <input type='text' placeholder='Nom' className='w-full h-11 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-400 text-pale-sky-50 focus:outline-none focus:ring-2 focus:ring-blue-ribbon-400' {...register('name')}/>
 
-        <input type='email' placeholder='Email' className='w-full h-11 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-500 text-pale-sky-50 focus:outline-none focus:ring-2 ring-blue-ribbon' {...register('email')}/>
+        <input type='email' placeholder='Email' className='w-full h-11 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-400 text-pale-sky-50 focus:outline-none focus:ring-2 focus:ring-blue-ribbon-400' {...register('email')}/>
         
-        <textarea placeholder='Message' className='w-full h-32 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-500 text-pale-sky-50 focus:outline-none focus:ring-2 ring-blue-ribbon resize-none' maxLength={500} {...register('message')}/>
+        <textarea placeholder='Message' className='w-full h-32 p-4 bg-pale-sky-800 rounded-lg placeholder:text-pale-sky-400 text-pale-sky-50 focus:outline-none focus:ring-2 focus:ring-blue-ribbon-400 resize-none' maxLength={500} {...register('message')}/>
         
         <Button className='mt-4 self-center'>
           Contactez-moi
