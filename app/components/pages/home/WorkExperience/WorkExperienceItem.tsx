@@ -20,7 +20,7 @@ export const WorkExperienceItem = ({work}:WorkExperienceItemProps) => {
 				<div className='flex flex-col gap-2 text-sm sm:text-base'>
 					<h3 className='w-fit'><a href={work.compagnyUrl} target='_blank' rel='noreferrer' className='text-base sm:text-lg font-semibold text-pale-sky-50 hover:text-blue-ribbon-300 transition-colors'><span className='text-blue-ribbon-400'>@</span> {work.compagnyName}</a></h3>
 					{work.role && <p className='text-blue-ribbon-300 font-medium'>{work.role}</p>}
-					<p className='text-xs sm:text-sm font-mono text-pale-sky-500'>{`Du ${work.startDate} au ${work.endDate}`}</p>
+					<p className='text-xs sm:text-sm font-mono text-pale-sky-400'>{`Du ${work.startDate} au ${work.endDate}`}</p>
 					<div className='mt-3 text-pale-sky-300'>
 						<RichText content={work.description.raw}/>
 					</div>
