@@ -11,8 +11,7 @@ import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
 import {HomePageData} from '@/app/types/page-info'
 
 export const getPageData = async():Promise<HomePageData> => {
-	const query = `
-query MyQuery {
+	const query = `query MyQuery {
   page(where: {slug: "home"}) {
     title
     slug
@@ -47,6 +46,9 @@ query MyQuery {
         name
       }
     }
+    workExperienceIntro{
+      raw
+    }
     workExperience {
       compagnyName
       compagnyUrl
@@ -64,8 +66,7 @@ query MyQuery {
       }
     }
   }
-}
-	`
+}`
 	return fetchHygraphQuery(query)
 }
 
@@ -81,7 +82,7 @@ export default async function Home() {
       <HeroSection homeInfo={pageData} />
       <KnowTechs knownTechData={pageData.knownTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />
-			<WorkExperience workExperience={pageData.workExperience} />
+			<WorkExperience homeInfo={pageData} workExperience={pageData.workExperience} />
 		</>
 	)
 }

@@ -37,6 +37,9 @@ export type HomePageInfo = {
   socials: Social[]
   knownTechs: knownTech[]
   highlightProjects: Project[]
+  workExperienceIntro: {
+    raw:RichTextContent
+  }
   workExperience:WorkExperience[]
 }
 

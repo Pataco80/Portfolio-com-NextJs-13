@@ -1,17 +1,20 @@
 // Imports Components
 import { SectionTitle } from '@/app/components/SectionTitle'
 import { WorkExperienceItem } from '@/app/components/pages/home/WorkExperience/WorkExperienceItem'
-
+import { RichText } from '@/app/components/RichText'
 // Imports types
 import { WorkExperience as Works } from '@/app/types/works-experience'
+import { HomePageInfo } from '@/app/types/page-info'
+import { CMSIcon } from '@/app/components/CMSIcon'
 
 // Types Props
 type WorkExperienceProps = {
+	homeInfo:HomePageInfo
 	workExperience:Works[]
 }
 
 // Component
-export const WorkExperience = ({workExperience}:WorkExperienceProps) => {
+export const WorkExperience = ({homeInfo,workExperience}:WorkExperienceProps) => {
 	return (
 		// JSX Component
 		<section className='container flex flex-col md:flex-row gap-8 lg:gap-10 py-16'>
@@ -21,11 +24,16 @@ export const WorkExperience = ({workExperience}:WorkExperienceProps) => {
 					title='Expériences professionnelles'
 					subtitle='expériences'
 				/>
-				<p className='mt-6 text-pale-sky-400'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque a
-					similique temporibus quaerat soluta nulla distinctio assumenda velit.
-					Laboriosam, aperiam?
-				</p>
+				<div className='mt-6 text-pale-sky-400'>
+				{homeInfo.workExperienceIntro?.raw && (
+					<RichText content={homeInfo.workExperienceIntro.raw} />
+				)}
+				</div>
+				<ul className="flex items-center gap-3 h-20 text-2xl">
+				{homeInfo.socials.map((item, index) => {
+								return <li key={index}><a href={item.url} target="_blank" rel="noopener noreferrer" aria-label="Réseau social" className="inline-flex p-1 rounded-md text-pale-sky-400 hover:text-blue-ribbon-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300"><CMSIcon icon={item.iconSvg} /></a></li>
+							})}
+				</ul>
 			</article>
 			<div className='flex flex-col gap-12 lg:gap-16'>
 				{
