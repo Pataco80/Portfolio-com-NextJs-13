@@ -43,7 +43,13 @@ export const BackToTop = () => {
 
 	// JSX Component
   return (
-    <Button className={!visible?`opacity-0 duration-500 transition-all`:`fixed bottom-6 right-6 p-2 opacity-100 duration-300 transition-all shadow-button`} onClick={handleScroll}>
+    <Button
+      aria-label='Remonter en haut de la page'
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
+      onClick={handleScroll}
+      className={`fixed bottom-6 right-6 p-2 shadow-button transition-all ${visible ? 'opacity-100 duration-300' : 'opacity-0 duration-500 pointer-events-none'}`}
+    >
       <HiArrowNarrowUp size={20}/>
     </Button>
   )

@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html lang='pt-BR' className={`${inter.variable} ${plexMono.variable}`}>
+		<html lang='fr' className={`${inter.variable} ${plexMono.variable}`}>
 			<body>
 				<Header />
-				{children}
+				<main>{children}</main>
 				<Footer />
 				<BackToTop/>
 			</body>
