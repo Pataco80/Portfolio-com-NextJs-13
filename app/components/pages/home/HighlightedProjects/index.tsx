@@ -19,7 +19,7 @@ export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
 	// JSX Component
 	return (
 		<section className='container py-16'>
-			<SectionTitle title='Projets en vedette' subtitle="highlight's" />
+			<SectionTitle as='h2' title='Projets en vedette' subtitle="highlight's" />
 			<DividerHorizontal />
 			{projects?.map((project) => {
 				return (

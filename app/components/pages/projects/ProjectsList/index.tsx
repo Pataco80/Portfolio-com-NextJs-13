@@ -13,7 +13,6 @@ type ProjectsListProps = {
 
 // Component
 export const ProjectsList = ({projects}:ProjectsListProps) => {
-
 	// Components variables
 
 	// JSX Component

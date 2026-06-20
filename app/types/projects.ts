@@ -29,7 +29,7 @@ export type Project = {
     raw:RichTextContent
   },
   liveProjectUrl?:string,
-  gitHubUrl?:string,
+  githubUrl?:string,
   technologies: knownTech[],
   pageThumbnail: {
     url:string,

@@ -14,7 +14,7 @@ export const KnowTechs = ({ knownTechData }: knownTechProps) => {
 	// JSX Component
 	return (
 		<section className='container py-16'>
-			<SectionTitle title='Mes Connaissances' subtitle='compétences' />
+			<SectionTitle as='h2' title='Mes Connaissances' subtitle='compétences' />
 			<div className=' mt-16 grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-4'>
 				{knownTechData?.map((tech) => {
 					return <KnowTechCard key={tech.name} tech={tech} />
