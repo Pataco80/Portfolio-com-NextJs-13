@@ -25,7 +25,7 @@ export const Header = () => {
 	return (
 		<header id='header' className='absolute top-0 w-full z-10 h-24 flex justify-between items-center'>
 			<div className='container flex items-center justify-between'>
-				<Link href='/'>
+				<Link href='/' className='inline-flex rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pale-sky-900'>
 					<Image
 						src='/images/logos/logo.svg'
 						alt='Logo DWDeveloppement'

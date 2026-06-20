@@ -32,7 +32,7 @@ export const RichText = ({ ...props }: RichTextProps) => {
             href={href}
             target={openInNewTab ? '_blank' : undefined}
             rel={openInNewTab ? 'noopener noreferrer' : rel}
-            className="text-blue-ribbon-300 hover:text-blue-ribbon-200 transition-colors underline underline-offset-2"
+            className="text-blue-ribbon-300 hover:text-blue-ribbon-200 transition-colors underline underline-offset-2 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300"
           >
             {children}
           </a>

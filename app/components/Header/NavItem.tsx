@@ -24,7 +24,7 @@ export const NavItem = ({ label, href }: NavItemProps) => {
 			<Link
 				href={href}
 				className={cn(
-					'text-pale-sky-300 hover:text-blue-ribbon-400 transition-colors',
+					'text-pale-sky-300 hover:text-blue-ribbon-400 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pale-sky-900',
 					isActive && 'text-pale-sky-50'
 				)}>
 				<span className='text-blue-ribbon-400 mr-1'>#</span>
