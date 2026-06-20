@@ -30,9 +30,9 @@ export const WorkExperience = ({homeInfo,workExperience}:WorkExperienceProps) =>
 				)}
 				</div>
 				<ul className="flex items-center gap-3 h-20 text-2xl">
-				{homeInfo.socials.map((item, index) => {
-								return <li key={index}><a href={item.url} target="_blank" rel="noopener noreferrer" aria-label="Réseau social" className="inline-flex p-1 rounded-md text-pale-sky-400 hover:text-blue-ribbon-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300"><CMSIcon icon={item.iconSvg} /></a></li>
-							})}
+					{homeInfo.socials.map((item, index) => {
+						return <li key={index}><a href={item.url} target="_blank" rel="noopener noreferrer" aria-label={`Voir mon profil ${item.name}`} className="inline-flex p-1 rounded-md text-pale-sky-400 hover:text-blue-ribbon-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300"><CMSIcon icon={item.iconSvg} /></a></li>
+					})}
 				</ul>
 			</article>
 			<div className='flex flex-col gap-12 lg:gap-16'>

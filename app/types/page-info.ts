@@ -7,6 +7,7 @@ import { WorkExperience } from '@/app/types/works-experience'
 
 // Types
 export type Social = {
+  name:string,
   iconSvg:string,
   url:string
 }

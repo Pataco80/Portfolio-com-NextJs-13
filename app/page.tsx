@@ -19,6 +19,7 @@ export const getPageData = async():Promise<HomePageData> => {
       raw
     }
     socials {
+      name
       iconSvg
       url
     }
