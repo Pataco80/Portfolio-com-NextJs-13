@@ -38,7 +38,10 @@ export default async function Projects() {
   return (
     <>
       <PageIntroduction />
-      <ProjectsList projects={projects}/>
+      <ProjectsList projects={projects} linesMode='B' linesFaint surface='base'/>
+      <ProjectsList projects={projects} linesMode='B' linesFaint surface='sky950'/>
+      <ProjectsList projects={projects} linesMode='B' linesFaint surface='base'/>
+      <ProjectsList projects={projects} linesMode='B' linesFaint surface='sky950'/>
     </>
   )
 }
