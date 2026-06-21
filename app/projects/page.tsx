@@ -1,6 +1,7 @@
 // Imports Components
 import { PageIntroduction } from '@/app/components/PageIntroduction'
 import { ProjectsList } from '@/app/components/pages/projects/ProjectsList'
+import { CircuitDivider } from '@/app/components/circuit-divider'
 
 // Imports Queries
 import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
@@ -38,10 +39,14 @@ export default async function Projects() {
   return (
     <>
       <PageIntroduction />
-      <ProjectsList projects={projects} linesMode='B' linesFaint surface='base'/>
-      <ProjectsList projects={projects} linesMode='B' linesFaint surface='sky950'/>
-      <ProjectsList projects={projects} linesMode='B' linesFaint surface='base'/>
-      <ProjectsList projects={projects} linesMode='B' linesFaint surface='sky950'/>
+      <CircuitDivider />
+      <ProjectsList projects={projects} surface='base'/>
+      <CircuitDivider from='#1E2024' to='#121315' />
+      <ProjectsList projects={projects} surface='sky950'/>
+      <CircuitDivider from='#121315' to='#1E2024' />
+      <ProjectsList projects={projects} surface='base'/>
+      <CircuitDivider from='#1E2024' to='#121315' />
+      <ProjectsList projects={projects} surface='sky950'/>
     </>
   )
 }
