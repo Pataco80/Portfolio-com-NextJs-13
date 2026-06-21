@@ -15,7 +15,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 	// JSX Component
   return (
     <Link href={`/projects/${project.slug}`} className='block rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pale-sky-900'>
-      <article className='group h-[480px] flex flex-col bg-pale-sky-800 border-2 border-pale-sky-800 transition-all hover:border-blue-ribbon-500 opacity-90 hover:opacity-100 rounded-lg overflow-hidden'>
+      <article className='group h-[480px] flex flex-col bg-pale-sky-800/45 hover:bg-pale-sky-800/70 backdrop-blur-lg border border-white/10 hover:border-blue-ribbon-500/70 shadow-[0_16px_40px_-12px_rgba(0,0,0,0.55)] transition-all rounded-lg overflow-hidden'>
       <div className='w-full h-48 overflow-hidden'>
         <Image className='object-cover w-full h-full transition-all duration-500 group-hover:scale-110' src={project.thumbnail.url} alt={project.thumbnail.textAlt} width={380} height={200} />
       </div>
