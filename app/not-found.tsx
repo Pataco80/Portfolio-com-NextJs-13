@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // Imports Components
-import { Button } from '@/app/components/Button'
+import { Button } from '@/components/shared/button'
 import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 // Component

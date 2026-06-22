@@ -1,17 +1,17 @@
 // Imports Components
-import { PageIntroduction } from '@/app/components/PageIntroduction'
-import { ProjectsList } from '@/app/components/pages/projects/ProjectsList'
-import { CircuitDivider } from '@/app/components/circuit-divider'
+import { PageIntroduction } from '@/components/shared/page-introduction'
+import { ProjectsList } from '@/pages/projects/projects-list'
+import { CircuitDivider } from '@/components/shared/circuit-divider'
 
 // Imports Queries
-import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
+import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 
 // Imports Types
-import {ProjectsPageData} from '@/app/types/page-info'
+import { ProjectsPageData } from '@/types/page-info'
 
 // Page Query
-export const getPageData = async ():Promise<ProjectsPageData> => {
-  const query = `
+export const getPageData = async (): Promise<ProjectsPageData> => {
+	const query = `
     query ProjectsQuery {
     projects {
       title
@@ -28,25 +28,25 @@ export const getPageData = async ():Promise<ProjectsPageData> => {
   }
   `
 
-  return fetchHygraphQuery(query)
+	return fetchHygraphQuery(query)
 }
 
 // Component
 export default async function Projects() {
-  const {projects} = await getPageData();
+	const { projects } = await getPageData()
 
-  // JSX Component
-  return (
-    <>
-      <PageIntroduction />
-      <CircuitDivider />
-      <ProjectsList projects={projects} surface='base'/>
-      <CircuitDivider from='#1E2024' to='#121315' />
-      <ProjectsList projects={projects} surface='sky950'/>
-      <CircuitDivider from='#121315' to='#1E2024' />
-      <ProjectsList projects={projects} surface='base'/>
-      <CircuitDivider from='#1E2024' to='#121315' />
-      <ProjectsList projects={projects} surface='sky950'/>
-    </>
-  )
+	// JSX Component
+	return (
+		<>
+			<PageIntroduction />
+			<CircuitDivider />
+			<ProjectsList projects={projects} surface='base' />
+			<CircuitDivider from='#1E2024' to='#121315' parallax />
+			<ProjectsList projects={projects} surface='sky950' />
+			<CircuitDivider from='#121315' to='#1E2024' parallax />
+			<ProjectsList projects={projects} surface='base' />
+			<CircuitDivider from='#1E2024' to='#121315' parallax />
+			<ProjectsList projects={projects} surface='sky950' />
+		</>
+	)
 }

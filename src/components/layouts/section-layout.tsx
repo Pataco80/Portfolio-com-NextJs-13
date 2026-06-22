@@ -1,7 +1,12 @@
 import { cn } from "@/lib/utils";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 
 type SectionLayoutProps = {
+  /**
+   * Balise de l'element externe (semantique : "section", "header", "footer", "main"...).
+   * Evite le div-sur-div quand le parent voudrait un wrapper semantique.
+   */
+  as?: ElementType;
   /**
    * The section size.
    * sm = 896px
@@ -12,6 +17,7 @@ type SectionLayoutProps = {
   /**
    * The variant of the section.
    * default = default background and foreground
+   * alt-section = alternate section background (pale-sky-950)
    * card = card background and card foreground
    * primary = primary background and primary foreground
    * invert = foreground background and background foreground
@@ -19,22 +25,31 @@ type SectionLayoutProps = {
    */
   variant?: "default" | "alt-section" | "card" | "primary" | "invert" | "image" | "transparent";
   /**
-   * The class name of the div that contain colors.
+   * The class name of the element that contains colors.
    */
   containerClassName?: string;
+  /**
+   * Calque(s) de fond rendu(s) en absolute, full-bleed derriere le contenu
+   * (halo, motifs, image...). Active relative + overflow-hidden sur l'externe.
+   */
+  backdrop?: ReactNode;
 } & ComponentPropsWithoutRef<"div">;
 
 export const SectionLayout = ({
+  as: Tag = "div",
   size = "base",
   variant = "default",
   className,
   containerClassName,
+  backdrop,
   children,
   ...props
 }: SectionLayoutProps) => {
   return (
-    <div
+    <Tag
       className={cn(
+        "relative",
+        backdrop && "overflow-hidden",
         {
           "bg-background text-foreground": variant === "default",
           "bg-alt-section text-foreground": variant === "alt-section",
@@ -49,9 +64,14 @@ export const SectionLayout = ({
       )}
       {...props}
     >
+      {backdrop && (
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          {backdrop}
+        </div>
+      )}
       <div
         className={cn(
-          "m-auto px-4 py-20 lg:py-28",
+          "relative z-10 m-auto px-4 py-20 lg:py-28",
           {
             "max-w-4xl": size === "sm",
             "max-w-5xl": size === "base",
@@ -62,6 +82,6 @@ export const SectionLayout = ({
       >
         {children}
       </div>
-    </div>
+    </Tag>
   );
 };

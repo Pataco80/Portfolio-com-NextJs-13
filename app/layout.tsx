@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
-import { Providers } from '@/app/providers'
-import { Header } from '@/app/components/Header'
-import { Footer } from '@/app/components/Footer'
-import { BackToTop } from '@/app/components/BackToTop'
+import { Providers } from './providers'
+import { Header } from '@/components/layouts/header'
+import { Footer } from '@/components/layouts/footer'
+import { BackToTop } from '@/components/shared/back-to-top'
 
 const inter = Inter({
 	variable: '--font-inter',

@@ -1,7 +1,7 @@
-import { ProjectDetails } from '@/app/components/pages/projects/ProjectDetails'
-import { ProjectSections } from '@/app/components/pages/projects/ProjectSections'
-import { ProjectPageData } from '@/app/types/page-info'
-import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
+import { ProjectDetails } from '@/pages/projects-details/project-details'
+import { ProjectSections } from '@/pages/projects-details/project-sections'
+import { ProjectPageData } from '@/types/page-info'
+import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 //import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 

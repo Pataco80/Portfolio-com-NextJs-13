@@ -1,14 +1,14 @@
 // Imports Components
-import { HeroSection } from '@/app/components/pages/home/HeroSection'
-import { KnowTechs } from '@/app/components/pages/home/KnowTechs'
-import { HighlightedProjects } from '@/app/components/pages/home/HighlightedProjects'
-import { WorkExperience } from '@/app/components/pages/home/WorkExperience'
+import { HeroSection } from '@/pages/home/hero-section'
+import { KnowTechs } from '@/pages/home/know-techs'
+import { HighlightedProjects } from '@/pages/home/highlighted-projects'
+import { WorkExperience } from '@/pages/home/work-experience'
 
 // Imports Queries
-import { fetchHygraphQuery } from '@/app/utils/fetch-hygraph-query'
+import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 
 // Imports types
-import {HomePageData} from '@/app/types/page-info'
+import {HomePageData} from '@/types/page-info'
 
 export const getPageData = async():Promise<HomePageData> => {
 	const query = `query MyQuery {
