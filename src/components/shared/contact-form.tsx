@@ -33,7 +33,7 @@ export const ContactForm = () => {
 
 	// JSX Component
 	return (
-		<>
+		<section className='px-4'>
 			<SectionTitle as='h2' title='Prenez contact avec moi' subtitle='contact' className='items-center text-center' />
 			<form id='contact-form' onSubmit={handleSubmit(onSubmit)} className='mt-12 w-full max-w-[450px] flex flex-col gap-6'>
 				<input
@@ -62,6 +62,6 @@ export const ContactForm = () => {
 					<HiArrowNarrowRight size={18} />
 				</Button>
 			</form>
-		</>
+		</section>
 	)
 }

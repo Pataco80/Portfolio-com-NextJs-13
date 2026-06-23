@@ -7,7 +7,7 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 export const PageIntroduction = () => {
 	// JSX Component
 	return (
-		<section className='dark text-foreground relative overflow-hidden w-full h-[600px] flex flex-col items-center justify-center px-4 py-20 lg:pt-16 lg:pb-28 bg-hero bg-hero-image bg-right-bottom lg:bg-center bg-no-repeat bg-cover [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]'>
+		<section className='dark text-foreground relative overflow-hidden w-full h-[600px] flex flex-col items-center justify-center px-4 py-20 lg:pt-16 lg:pb-28 bg-pale-sky-950 bg-hero-image bg-right-bottom lg:bg-center bg-no-repeat bg-cover [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]'>
 			<div
 				aria-hidden
 				className='absolute inset-0 z-0 pointer-events-none'

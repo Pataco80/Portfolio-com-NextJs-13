@@ -292,7 +292,7 @@ type DividerVariant = 'base' | 'reverse' | 'hero' | 'hero-alt'
 
 // Bande de fusion pilotee par tokens (light/dark automatique) :
 // base/reverse = alternance de contenu (background <-> alt-section).
-// hero/hero-alt = sortie d'un hero (ancre sombre fixe --hero) vers la 1re section.
+// hero/hero-alt = sortie d'un hero : ancre = bleu du bas du hero (--hero, fixe) -> 1re section.
 const DIVIDER_SURFACES: Record<DividerVariant, { from: string; to: string }> = {
 	base: { from: 'hsl(var(--background))', to: 'hsl(var(--alt-section))' },
 	reverse: { from: 'hsl(var(--alt-section))', to: 'hsl(var(--background))' },
@@ -309,6 +309,7 @@ type CircuitDividerProps = {
 
 export function CircuitDivider({ className, animate = true, variant = 'base' }: CircuitDividerProps) {
 	const { from, to } = DIVIDER_SURFACES[variant]
+	const isHero = variant === 'hero' || variant === 'hero-alt'
 	const id = useId()
 	const glowId = `${id}-blueGlow`
 	const photonId = `${id}-photonGlow`
@@ -342,7 +343,10 @@ export function CircuitDivider({ className, animate = true, variant = 'base' }: 
 
 	return (
 		<div
-			style={{ background: `linear-gradient(to bottom, ${from}, ${from} 20%, ${to} 80%, ${to})` }}
+			style={{
+				background: `linear-gradient(to bottom, ${from}, ${from} 20%, ${to} 80%, ${to})`,
+				...(isHero ? { paddingTop: '4rem', boxShadow: '0px -20px 20px hsl(var(--hero))' } : {}),
+			}}
 			className={cn(
 				// Bande de fusion : le degrade fond les couleurs des 2 sections (couleur pleine aux
 				// bords = couture invisible). py genereux => l'atome reste centre, jamais rogne.

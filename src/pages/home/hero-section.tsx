@@ -28,7 +28,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 
 	// JSX Component
 	return (
-		<section className='dark relative overflow-hidden w-full lg:h-[1050px] bg-hero bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end px-4 py-20 lg:pt-16 lg:pb-28'>
+		<section className='dark relative w-full lg:h-[1050px] bg-pale-sky-950 bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end px-4 pt-20 lg:pt-16'>
 			<div
 				aria-hidden
 				className='absolute inset-0 z-0 pointer-events-none'
