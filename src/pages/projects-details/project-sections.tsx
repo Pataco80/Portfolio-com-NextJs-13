@@ -20,8 +20,8 @@ export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
 				return (
 					<div key={section.title} className='flex flex-col items-center gap-6 md:gap-12'>
 						<div className='flex flex-col items-center gap-3'>
-							<h2 className='text-2xl font-medium text-center md:text-3xl text-pale-sky-50'>{section.title}</h2>
-							<span aria-hidden className='h-0.5 w-12 rounded-full bg-blue-ribbon-500/70' />
+							<h2 className='text-2xl font-medium text-center md:text-3xl text-foreground'>{section.title}</h2>
+							<span aria-hidden className='h-0.5 w-12 rounded-full bg-accent/70' />
 						</div>
 						<Image
 							src={section.image.url}

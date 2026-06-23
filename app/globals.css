@@ -3,27 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-	/* Tokens semantiques (shadcn, canaux HSL). Light = dark pour l'instant : */
-	/* le vrai light mode consistera a changer les valeurs de :root.          */
+	/* Tokens semantiques (shadcn, canaux HSL). :root = LIGHT (off-white pale-sky), .dark = DARK. */
 	:root {
-		--background: 220 9% 12.9%;
-		--foreground: 223 10% 86.1%;
-		--card: 220 8% 7.6%;
-		--card-foreground: 223 10% 86.1%;
-		--alt-section: 220 8% 7.6%;
-		--popover: 220 9% 12.9%;
-		--popover-foreground: 223 10% 86.1%;
-		--muted: 218 9% 24.1%;
-		--muted-foreground: 222 9% 62.2%;
-		--border: 218 9% 24.1%;
-		--input: 218 9% 24.1%;
+		--background: 216 10% 90%;
+		--foreground: 220 9% 12.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 220 9% 12.9%;
+		--alt-section: 223 10% 86.1%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 220 9% 12.9%;
+		--muted: 220 8% 82%;
+		--muted-foreground: 218 9% 34.9%;
+		--border: 220 8% 80%;
+		--input: 220 8% 88%;
 		--primary: 220 100% 50%;
-		--primary-foreground: 219 100% 93.9%;
-		--secondary: 218 9% 24.1%;
-		--secondary-foreground: 223 10% 86.1%;
-		--accent: 220 100% 58%;
-		--accent-foreground: 219 100% 93.9%;
-		--ring: 220 100% 73.9%;
+		--primary-foreground: 0 0% 100%;
+		--secondary: 220 8% 88%;
+		--secondary-foreground: 220 9% 12.9%;
+		--accent: 220 100% 50%;
+		--accent-foreground: 0 0% 100%;
+		--ring: 220 100% 50%;
 	}
 	.dark {
 		--background: 220 9% 12.9%;
@@ -46,7 +45,7 @@
 		--ring: 220 100% 73.9%;
 	}
 	body {
-		@apply bg-pale-sky-900 text-pale-sky-100 min-h-[1500px];
+		@apply bg-background text-foreground min-h-[1500px];
 	}
 }
 

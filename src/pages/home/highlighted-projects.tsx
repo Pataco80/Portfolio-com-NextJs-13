@@ -33,7 +33,7 @@ export const HighlightedProjects = ({ projects, surface }: HighlightedProjectsPr
 				)
 			})}
 			<p className='flex items-center gap-1.5'>
-				<span className='text-pale-sky-400'>Si intéressé ?</span>
+				<span className='text-muted-foreground'>Si intéressé ?</span>
 				<Link className='inline-flex' href='/projects'>
 					Voir tous les projets
 					<LuArrowRight />

@@ -28,7 +28,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 
 	// JSX Component
 	return (
-		<section className='relative overflow-hidden w-full lg:h-[1050px] bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end px-4 py-20 lg:pt-16 lg:pb-28'>
+		<section className='dark relative overflow-hidden w-full lg:h-[1050px] bg-pale-sky-950 bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat flex flex-col justify-end px-4 py-20 lg:pt-16 lg:pb-28'>
 			<div
 				aria-hidden
 				className='absolute inset-0 z-0 pointer-events-none'
@@ -41,7 +41,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 				<div className='w-full lg:max-w-[550px]'>
 					<Image src='/images/logos/logo-dwdevelopment.webp' alt='alt' width={600} height={72} className='mb-8' />
 					<p className='mb-4 text-sm sm:text-base text-blue-ribbon-300'>Bonjour je m&apos;appèle</p>
-					<h1 className='font-mono text-xl sm:text-2xl md:text-3xl'>
+					<h1 className='font-mono text-xl sm:text-2xl md:text-3xl text-pale-sky-50'>
 						<span className='sr-only'>DWDeveloppement - </span>Ricardo Do Vale
 					</h1>
 					<div className='my-8 text-sm text-pale-sky-400 sm:text-base'>

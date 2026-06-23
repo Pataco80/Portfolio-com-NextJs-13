@@ -24,7 +24,7 @@ export const SectionTitle = ({
 	// JSX Component
 	return (
 		<div className={cn('flex flex-col gap-4', className)}>
-			<span className='font-mono text-blue-ribbon-400 text-sm'>{`.../${subtitle}`}</span>
+			<span className='font-mono text-accent text-sm'>{`.../${subtitle}`}</span>
 			<Heading className='text-3xl font-medium'>{title}</Heading>
 		</div>
 	)

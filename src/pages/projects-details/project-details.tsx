@@ -16,7 +16,7 @@ type ProjectDetailsProps = {
 export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 	// JSX Component
 	return (
-		<section className='relative overflow-hidden w-full sm:min-h-[750px] flex flex-col items-center justify-end px-4 py-20 lg:pt-16 lg:pb-28 bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]'>
+		<section className='dark text-foreground relative overflow-hidden w-full sm:min-h-[750px] flex flex-col items-center justify-end px-4 py-20 lg:pt-16 lg:pb-28 bg-pale-sky-950 bg-hero-image bg-cover bg-right-bottom lg:bg-center bg-no-repeat [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]'>
 			<div
 				aria-hidden
 				className='absolute inset-0 z-0 pointer-events-none'

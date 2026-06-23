@@ -29,7 +29,7 @@ export const WorkExperience = ({ homeInfo, workExperience, surface }: WorkExperi
 			className='flex flex-col md:flex-row gap-8 lg:gap-10'>
 			<article className='max-w-[450px] md:max-w-[300px] lg:max-w-[450px]'>
 				<SectionTitle as='h2' title='Expériences professionnelles' subtitle='expériences' />
-				<div className='mt-6 text-pale-sky-400'>
+				<div className='mt-6 text-muted-foreground'>
 					{homeInfo.workExperienceIntro?.raw && <RichText content={homeInfo.workExperienceIntro.raw} />}
 				</div>
 				<ul className='flex items-center gap-3 h-20 text-2xl'>
@@ -41,7 +41,7 @@ export const WorkExperience = ({ homeInfo, workExperience, surface }: WorkExperi
 									target='_blank'
 									rel='noopener noreferrer'
 									aria-label={`Voir mon profil ${item.name}`}
-									className='inline-flex p-1 rounded-md text-pale-sky-400 hover:text-blue-ribbon-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300'>
+									className='inline-flex p-1 rounded-md text-muted-foreground hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'>
 									<CMSIcon icon={item.iconSvg} />
 								</a>
 							</li>
