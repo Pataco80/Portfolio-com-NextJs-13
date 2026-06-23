@@ -10,6 +10,11 @@ import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 import { ProjectsPageData } from '@/types/page-info'
 type SurfaceTone = 'base' | 'sky950'
 
+export const metadata = {
+	title: 'Mes Projets — DWDeveloppement',
+	description: 'Une sélection de projets web développés par Ricardo Do Vale (Next.js, React, TypeScript).',
+}
+
 // Page Query
 export const getPageData = async (): Promise<ProjectsPageData> => {
 	const query = `

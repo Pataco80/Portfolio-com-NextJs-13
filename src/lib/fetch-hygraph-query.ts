@@ -19,10 +19,10 @@ export const fetchHygraphQuery = async <T>(
 
   const json = await response.json()
 
-  if (!json.data) {
+  if (!response.ok || !json.data) {
     console.error('Hygraph query error:', JSON.stringify(json, null, 2))
-    console.error('HYGRAPH_URL set:', !!process.env.HYGRAPH_URL)
-    console.error('HYGRAPH_TOKEN set:', !!process.env.HYGRAPH_TOKEN)
+    console.error('HYGRAPH_URL set:', !!process.env.HYGRAPH_URL, '| HYGRAPH_TOKEN set:', !!process.env.HYGRAPH_TOKEN)
+    throw new Error(`Hygraph query failed (HTTP ${response.status})`)
   }
 
   return json.data
