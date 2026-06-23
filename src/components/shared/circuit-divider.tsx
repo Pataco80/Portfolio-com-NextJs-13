@@ -2,9 +2,9 @@
 
 import { useAnimateOnce } from '@/hooks/use-animate-once'
 import { cn } from '@/lib/utils'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
-import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react'
+import { useEffect, useId, useState, useSyncExternalStore } from 'react'
 
 // ── Theme-aware color palette ──────────────────────────────────────
 
@@ -293,7 +293,7 @@ function SvgDefs({ glowId, photonId }: { glowId: string; photonId: string }) {
 
 type CircuitDividerProps = {
 	className?: string
-	parallax?: boolean
+	animate?: boolean
 	/** Couleur du fond de la section au-dessus (haut du degrade). */
 	from?: string
 	/** Couleur du fond de la section en dessous (bas du degrade). */
@@ -302,7 +302,7 @@ type CircuitDividerProps = {
 
 export function CircuitDivider({
 	className,
-	parallax,
+	animate = true,
 	from = 'hsl(var(--background))',
 	to = 'hsl(var(--background))',
 }: CircuitDividerProps) {
@@ -323,12 +323,6 @@ export function CircuitDivider({
 	// Après le mount, utilise le theme résolu.
 	const colors = mounted && resolvedTheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
 
-	const scrollRef = useRef<HTMLDivElement>(null)
-	const { scrollYProgress } = useScroll({
-		target: scrollRef,
-		offset: ['start end', 'end start'],
-	})
-
 	const reducedMotion = useSyncExternalStore(
 		(cb) => {
 			const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -339,15 +333,12 @@ export function CircuitDivider({
 		() => false,
 	)
 
-	// zoom parallax
-	const zoom = useTransform(scrollYProgress, [0, 0.5, 1], [0.75, 1, 0.75])
-
-	const hasParallax = !!parallax
-	const parallaxStyle = hasParallax ? { scale: zoom } : undefined
+	const hasAnimate = !!animate
+	// Zoom d'entree : joue une seule fois quand le divider entre dans le viewport (sauf reduced-motion)
+	const animateEntrance = hasAnimate && !reducedMotion
 
 	return (
 		<div
-			ref={scrollRef}
 			style={{ background: `linear-gradient(to bottom, ${from}, ${from} 20%, ${to} 80%, ${to})` }}
 			className={cn(
 				// Bande de fusion : le degrade fond les couleurs des 2 sections (couleur pleine aux
@@ -358,7 +349,9 @@ export function CircuitDivider({
 			<motion.div
 				ref={ref as React.RefObject<HTMLDivElement>}
 				className='relative h-[100px] sm:h-[130px] md:h-[160px] lg:h-[200px] w-full'
-				style={hasParallax ? parallaxStyle : undefined}>
+				initial={{ scale: animateEntrance ? 0.5 : 1 }}
+				animate={{ scale: animateEntrance && !hasAnimated ? 0.5 : 1 }}
+				transition={{ duration: 0.7, ease: 'easeOut' }}>
 				<svg viewBox='0 0 1200 200' preserveAspectRatio='xMidYMid meet' className='absolute inset-0 w-full h-full'>
 					<SvgDefs glowId={glowId} photonId={photonId} />
 					<BaseTraces colors={colors} />

@@ -41,11 +41,11 @@ export default async function Projects() {
 			<PageIntroduction />
 			<CircuitDivider />
 			<ProjectsList projects={projects} surface='base' />
-			<CircuitDivider from='#1E2024' to='#121315' parallax />
+			<CircuitDivider from='#1E2024' to='#121315' animate />
 			<ProjectsList projects={projects} surface='sky950' />
-			<CircuitDivider from='#121315' to='#1E2024' parallax />
+			<CircuitDivider from='#121315' to='#1E2024' animate />
 			<ProjectsList projects={projects} surface='base' />
-			<CircuitDivider from='#1E2024' to='#121315' parallax />
+			<CircuitDivider from='#1E2024' to='#121315' animate />
 			<ProjectsList projects={projects} surface='sky950' />
 		</>
 	)
