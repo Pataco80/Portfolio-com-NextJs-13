@@ -39,7 +39,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 			/>
 			<div className='relative z-10 container flex justify-between flex-col-reverse lg:flex-row gap-20 lg:gap-8 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)]'>
 				<div className='w-full lg:max-w-[550px]'>
-					<Image src='/images/logos/logo-dwdevelopment.webp' alt='alt' width={600} height={72} className='mb-8' />
+					<Image src='/images/logos/logo-dwdevelopment.webp' alt='' width={600} height={72} className='mb-8 h-auto' />
 					<p className='mb-4 text-sm sm:text-base text-blue-ribbon-300'>Bonjour je m&apos;appèle</p>
 					<h1 className='font-mono text-xl sm:text-2xl md:text-3xl text-pale-sky-50'>
 						<span className='sr-only'>DWDeveloppement - </span>Ricardo Do Vale
@@ -55,7 +55,7 @@ export const HeroSection = ({ homeInfo }: PageInfoProps) => {
 						))}
 					</ul>
 					<div className='flex flex-col items-start gap-3 mt-6 lg:mt-10 md:flex-row md:items-center sm:gap-5'>
-						<Button onClick={handleContact}>
+						<Button onClick={handleContact} type='button'>
 							Contactez-moi
 							<LuArrowRight size={18} />
 						</Button>

@@ -134,3 +134,25 @@ Deux points **bloquants fonctionnels** (formulaire de contact inopérant, fetch 
 ---
 
 *Note : tous les chiffres de perf JS sont en mode développement. Lancer `next build` puis `npx @next/bundle-analyzer` pour la taille réelle de prod avant toute optimisation de bundle.*
+
+---
+
+## Annexe A — Paramètres image hero (Affinity Photo) · item #6
+
+**Source actuelle :** `public/images/bg-portfolio-hero.webp` — **1440 × 756 px · RGBA · 561 KB**.
+
+Le souci n'est **pas** la résolution (1440×756 est raisonnable) mais une **sur-qualité de compression** + un **canal alpha inutile** (un fond n'a pas besoin de transparence). Bien réexportée, l'image doit tomber à **~100–130 KB** (gain ~75 %).
+
+**Réglages d'export (Persona Export) :**
+
+- **Dimensions :** `1440 × 756` — **ne pas agrandir** (la source ne contient pas plus de détail ; agrandir ne ferait que gonfler le poids).
+- **Alpha :** **aplatir → exporter en RGB** (pas RGBA), fond opaque.
+- **Format :** **WebP (lossy)**, qualité **≈ 78** (ajuster 72–82 pour viser < 150 KB, idéalement ~100 KB).
+- **Alternative plus légère :** **AVIF**, qualité **≈ 58** (≈ 50–90 KB), meilleure compression, support navigateur OK aujourd'hui.
+- **Rééchantillonnage :** Lanczos 3 (uniquement si tu redimensionnes — inutile ici puisqu'on garde 1440×756).
+- **Cible :** **< 150 KB**.
+
+**Nom de fichier :** garder `bg-portfolio-hero.webp` (remplacement direct) → aucun changement CSS nécessaire.
+
+**Option retina (facultative) :** la source n'étant qu'en 1440px, sur un écran > 1440px le fond est légèrement adouci par le navigateur (acceptable sous les calques + texte). Si tu veux du net en grand, il faudrait un **original plus haute résolution** (ex. 2880 × 1512) — exporter alors en WebP q70. Sans original HD, inutile d'upscaler le 1440.
+

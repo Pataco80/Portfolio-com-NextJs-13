@@ -21,7 +21,7 @@
 		--primary-foreground: 0 0% 100%;
 		--secondary: 220 8% 88%;
 		--secondary-foreground: 220 9% 12.9%;
-		--accent: 220 100% 50%;
+		--accent: 220 100% 47%;
 		--accent-foreground: 0 0% 100%;
 		--ring: 220 100% 50%;
 	}
@@ -42,7 +42,7 @@
 		--primary-foreground: 219 100% 93.9%;
 		--secondary: 218 9% 24.1%;
 		--secondary-foreground: 223 10% 86.1%;
-		--accent: 220 100% 58%;
+		--accent: 220 100% 64%;
 		--accent-foreground: 219 100% 93.9%;
 		--ring: 220 100% 73.9%;
 	}
@@ -65,4 +65,17 @@
 
 *::-webkit-scrollbar-thumb {
 	@apply bg-blue-ribbon rounded-[24px];
+}
+
+/* Respecte prefers-reduced-motion : neutralise transitions/animations CSS (hover scale, etc.).
+   Le CircuitDivider gere deja ses animations JS/SMIL separement. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
