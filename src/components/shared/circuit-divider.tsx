@@ -288,21 +288,27 @@ function SvgDefs({ glowId, photonId }: { glowId: string; photonId: string }) {
 
 // ── Main component ─────────────────────────────────────────────────
 
+type DividerVariant = 'base' | 'reverse' | 'hero' | 'hero-alt'
+
+// Bande de fusion pilotee par tokens (light/dark automatique) :
+// base/reverse = alternance de contenu (background <-> alt-section).
+// hero/hero-alt = sortie d'un hero (ancre sombre fixe --hero) vers la 1re section.
+const DIVIDER_SURFACES: Record<DividerVariant, { from: string; to: string }> = {
+	base: { from: 'hsl(var(--background))', to: 'hsl(var(--alt-section))' },
+	reverse: { from: 'hsl(var(--alt-section))', to: 'hsl(var(--background))' },
+	hero: { from: 'hsl(var(--hero))', to: 'hsl(var(--background))' },
+	'hero-alt': { from: 'hsl(var(--hero))', to: 'hsl(var(--alt-section))' },
+}
+
 type CircuitDividerProps = {
 	className?: string
 	animate?: boolean
-	/** Couleur du fond de la section au-dessus (haut du degrade). */
-	from?: string
-	/** Couleur du fond de la section en dessous (bas du degrade). */
-	to?: string
+	/** Variante de la bande de fusion, pilotee par tokens (light/dark auto). */
+	variant?: DividerVariant
 }
 
-export function CircuitDivider({
-	className,
-	animate = true,
-	from = 'hsl(var(--background))',
-	to = 'hsl(var(--background))',
-}: CircuitDividerProps) {
+export function CircuitDivider({ className, animate = true, variant = 'base' }: CircuitDividerProps) {
+	const { from, to } = DIVIDER_SURFACES[variant]
 	const id = useId()
 	const glowId = `${id}-blueGlow`
 	const photonId = `${id}-photonGlow`

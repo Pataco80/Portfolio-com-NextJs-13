@@ -57,7 +57,7 @@ export default async function Project({ params }: ProjectProps) {
 	return (
 		<>
 			<ProjectDetails project={project} />
-			<CircuitDivider from='#121315' to='#1E2024' animate />
+			<CircuitDivider variant='hero' animate />
 			<ProjectSections sections={project.sections} />
 		</>
 	)

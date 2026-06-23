@@ -40,7 +40,7 @@ export default async function Projects() {
 	return (
 		<>
 			<PageIntroduction />
-			<CircuitDivider from='#121315' to='#1E2024' animate />
+			<CircuitDivider variant='hero' animate />
 			<ProjectsList projects={projects} surface='base' />
 		</>
 	)

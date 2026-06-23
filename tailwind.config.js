@@ -43,6 +43,7 @@ module.exports = {
         background: 'hsl(var(--background) / <alpha-value>)',
         foreground: 'hsl(var(--foreground) / <alpha-value>)',
         'alt-section': 'hsl(var(--alt-section) / <alpha-value>)',
+        hero: 'hsl(var(--hero) / <alpha-value>)',
         border: 'hsl(var(--border) / <alpha-value>)',
         input: 'hsl(var(--input) / <alpha-value>)',
         ring: 'hsl(var(--ring) / <alpha-value>)',

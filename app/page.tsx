@@ -81,11 +81,11 @@ export default async function Home() {
 	return (
 		<>
 			<HeroSection homeInfo={pageData} />
-			<CircuitDivider from='#1E2024' to='#121315' animate />
+			<CircuitDivider variant='hero-alt' animate />
 			<KnowTechs knownTechData={pageData.knownTechs} surface='sky950' />
-			<CircuitDivider from='#121315' to='#1E2024' animate />
+			<CircuitDivider variant='reverse' animate />
 			<HighlightedProjects projects={pageData.highlightProjects} surface='base' />
-			<CircuitDivider from='#1E2024' to='#121315' animate />
+			<CircuitDivider variant='base' animate />
 			<WorkExperience homeInfo={pageData} workExperience={pageData.workExperience} surface='sky950' />
 		</>
 	)
