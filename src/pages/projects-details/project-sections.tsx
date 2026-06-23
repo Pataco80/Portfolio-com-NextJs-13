@@ -15,7 +15,7 @@ type ProjectSectionsProps = {
 export const ProjectSections = ({ sections }: ProjectSectionsProps) => {
 	// JSX Component
 	return (
-		<SectionLayout as='section' size='lg' variant='default' backdrop={<SectionBackdrop />} className='flex flex-col gap-8 md:gap-32'>
+		<SectionLayout as='section' size='sm' variant='default' backdrop={<SectionBackdrop />} className='flex flex-col gap-8 md:gap-32'>
 			{sections.map((section) => {
 				return (
 					<div key={section.title} className='flex flex-col items-center gap-6 md:gap-12'>

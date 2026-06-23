@@ -18,7 +18,6 @@ type ColorPalette = {
 	glowRingInner: string
 	orbital: string
 	core: string
-	centerGlow: string
 }
 
 const DARK_COLORS: ColorPalette = {
@@ -31,7 +30,6 @@ const DARK_COLORS: ColorPalette = {
 	glowRingInner: 'rgba(0,85,255,0.15)',
 	orbital: '#dddfe3',
 	core: '#dddfe3',
-	centerGlow: 'radial-gradient(circle,rgba(0,85,255,0.20) 0%,rgba(0,85,255,0.05) 40%,transparent 70%)',
 }
 
 const LIGHT_COLORS: ColorPalette = {
@@ -44,7 +42,6 @@ const LIGHT_COLORS: ColorPalette = {
 	glowRingInner: 'rgba(0,85,255,0.25)',
 	orbital: '#3c4148',
 	core: '#0055FF',
-	centerGlow: 'radial-gradient(circle,rgba(0,85,255,0.08) 0%,rgba(0,85,255,0.03) 40%,transparent 70%)',
 }
 
 // ── Data: SVG trace paths ──────────────────────────────────────────
