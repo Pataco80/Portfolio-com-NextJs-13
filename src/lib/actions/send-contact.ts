@@ -20,12 +20,12 @@ export async function sendContact(data: unknown): Promise<ContactState> {
 	const { name, email, message } = parsed.data
 
 	const apiKey = process.env.RESEND_API_KEY
-	const to = process.env.CONTACT_TO_EMAIL
+	const to = process.env.NEXT_PUBLIC_EMAIL_CONTACT
 
 	// Fallback dev : sans cle Resend ou destinataire, on simule un succes
 	// pour pouvoir tester tout le flux (validation, toast, localStorage).
 	if (!apiKey || !to) {
-		console.info('[contact] Resend non configure (RESEND_API_KEY / CONTACT_TO_EMAIL) — envoi simule.', {
+		console.info('[contact] Resend non configure (RESEND_API_KEY / NEXT_PUBLIC_EMAIL_CONTACT) — envoi simule.', {
 			name,
 			email,
 		})
@@ -34,8 +34,8 @@ export async function sendContact(data: unknown): Promise<ContactState> {
 
 	try {
 		const resend = new Resend(apiKey)
-		const { error } = await resend.emails.send({
-			from: process.env.CONTACT_FROM_EMAIL || 'Portfolio <onboarding@resend.dev>',
+		const { data, error } = await resend.emails.send({
+			from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
 			to,
 			replyTo: email,
 			subject: `Nouveau message de ${name} (portfolio)`,
@@ -45,6 +45,7 @@ export async function sendContact(data: unknown): Promise<ContactState> {
 			console.error('[contact] Resend error:', error)
 			return { success: false, error: "L'envoi a échoué, réessaie plus tard." }
 		}
+		console.info('[contact] Resend OK — id:', data?.id)
 		return { success: true }
 	} catch (e) {
 		console.error('[contact] exception:', e)
