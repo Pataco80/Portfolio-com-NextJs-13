@@ -1,4 +1,6 @@
 // Imports Components
+import { SectionLayout } from '@/components/layouts/section-layout'
+import { SectionBackdrop } from '@/components/shared/section-backdrop'
 import { SectionTitle } from '@/components/shared/section-title'
 import { DividerHorizontal } from '@/components/shared/divider-line'
 import { HighlightCard } from '@/pages/home/highlight-card'
@@ -7,18 +9,19 @@ import { LuArrowRight } from 'react-icons/lu'
 
 // Imports types
 import { Project } from '@/types/projects'
+import { SurfaceTone } from '@/types/page-info'
 
 // Types Props
 type HighlightedProjectsProps = {
-	projects:Project[]
+	projects: Project[]
+	surface?: SurfaceTone
 }
 
 // Component
-export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
-
+export const HighlightedProjects = ({ projects, surface }: HighlightedProjectsProps) => {
 	// JSX Component
 	return (
-		<section className='container py-16'>
+		<SectionLayout as='section' size='lg' variant={surface === 'sky950' ? 'alt-section' : 'default'} backdrop={<SectionBackdrop />}>
 			<SectionTitle as='h2' title='Projets en vedette' subtitle="highlight's" />
 			<DividerHorizontal />
 			{projects?.map((project) => {
@@ -36,6 +39,6 @@ export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
 					<LuArrowRight />
 				</Link>
 			</p>
-		</section>
+		</SectionLayout>
 	)
 }

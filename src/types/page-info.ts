@@ -6,6 +6,8 @@ import { knownTech, Project } from '@/types/projects'
 import { WorkExperience } from '@/types/works-experience'
 
 // Types
+export type SurfaceTone = 'base' | 'sky950'
+
 export type Social = {
   name:string,
   iconSvg:string,

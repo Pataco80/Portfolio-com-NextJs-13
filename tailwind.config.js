@@ -73,7 +73,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-image': "url('/images/bg-portfolio-hero.webp')",
-        'section-glow': 'radial-gradient(900px circle at 25% 12%, rgba(0,85,255,0.30), transparent 60%), radial-gradient(820px circle at 85% 85%, rgba(41,112,255,0.22), transparent 60%)'
+        'section-glow': 'radial-gradient(900px circle at 75% 12%, rgba(0,85,255,0.30), transparent 60%), radial-gradient(820px circle at 15% 85%, rgba(41,112,255,0.22), transparent 60%)'
       },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace']

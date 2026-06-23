@@ -8,6 +8,7 @@ import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 
 // Imports Types
 import { ProjectsPageData } from '@/types/page-info'
+type SurfaceTone = 'base' | 'sky950'
 
 // Page Query
 export const getPageData = async (): Promise<ProjectsPageData> => {
@@ -39,14 +40,8 @@ export default async function Projects() {
 	return (
 		<>
 			<PageIntroduction />
-			<CircuitDivider />
-			<ProjectsList projects={projects} surface='base' />
-			<CircuitDivider from='#1E2024' to='#121315' animate />
-			<ProjectsList projects={projects} surface='sky950' />
 			<CircuitDivider from='#121315' to='#1E2024' animate />
 			<ProjectsList projects={projects} surface='base' />
-			<CircuitDivider from='#1E2024' to='#121315' animate />
-			<ProjectsList projects={projects} surface='sky950' />
 		</>
 	)
 }

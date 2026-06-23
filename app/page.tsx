@@ -8,9 +8,10 @@ import { WorkExperience } from '@/pages/home/work-experience'
 import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'
 
 // Imports types
-import {HomePageData} from '@/types/page-info'
+import { HomePageData } from '@/types/page-info'
+import { CircuitDivider } from '@/components/shared/circuit-divider'
 
-export const getPageData = async():Promise<HomePageData> => {
+export const getPageData = async (): Promise<HomePageData> => {
 	const query = `query MyQuery {
   page(where: {slug: "home"}) {
     title
@@ -73,18 +74,19 @@ export const getPageData = async():Promise<HomePageData> => {
 
 // Component
 export default async function Home() {
-	
-  // Components Functions
-  const { page: pageData } = await getPageData()
+	// Components Functions
+	const { page: pageData } = await getPageData()
 
 	// JSX Component
 	return (
 		<>
-      <HeroSection homeInfo={pageData} />
-      <KnowTechs knownTechData={pageData.knownTechs} />
-      <HighlightedProjects projects={pageData.highlightProjects} />
-			<WorkExperience homeInfo={pageData} workExperience={pageData.workExperience} />
+			<HeroSection homeInfo={pageData} />
+			<CircuitDivider from='#1E2024' to='#121315' animate />
+			<KnowTechs knownTechData={pageData.knownTechs} surface='sky950' />
+			<CircuitDivider from='#121315' to='#1E2024' animate />
+			<HighlightedProjects projects={pageData.highlightProjects} surface='base' />
+			<CircuitDivider from='#1E2024' to='#121315' animate />
+			<WorkExperience homeInfo={pageData} workExperience={pageData.workExperience} surface='sky950' />
 		</>
 	)
 }
-
