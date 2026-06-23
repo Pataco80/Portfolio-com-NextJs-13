@@ -156,3 +156,28 @@ Le souci n'est **pas** la résolution (1440×756 est raisonnable) mais une **sur
 
 **Option retina (facultative) :** la source n'étant qu'en 1440px, sur un écran > 1440px le fond est légèrement adouci par le navigateur (acceptable sous les calques + texte). Si tu veux du net en grand, il faudrait un **original plus haute résolution** (ex. 2880 × 1512) — exporter alors en WebP q70. Sans original HD, inutile d'upscaler le 1440.
 
+---
+
+## Annexe B — Corrections appliquées (branche `fix/audit-corrections`)
+
+Travaillé en autonomie, sans clé API. Branche `fix/audit-corrections` (FF depuis `main`).
+
+### ✅ Fait & vérifié (axe + test navigateur)
+
+- **#1 / #4 Formulaire** (`770f7cd`) : Server Action `sendContact` (Resend) avec **fallback dev** (sans `RESEND_API_KEY`/`CONTACT_TO_EMAIL` → envoi simulé succès), erreurs Zod **inline** sous chaque champ + `aria-invalid` / `aria-describedby` (3.3.1), toasts **sonner** (`<Toaster>` thémé dans `providers.tsx`), **persistance `localStorage`** (restore au montage, purge à l'envoi). `.env.example` ajouté. → testé : valide = toast succès + reset + purge ; invalide = 3 erreurs + anneaux rouges, pas d'envoi.
+- **#2 Robustesse Hygraph** (`2bb3bc0`) : `fetchHygraphQuery` **throw** sur échec → `app/error.tsx` ; `notFound()` sur slug inexistant → 404 (testé). `not-found.tsx` existait déjà.
+- **#3 Contraste** (`fbeb9c5`) : sous-titres en `text-base` + `--accent` light **47 %** / dark **64 %** → **axe = 0 violation de contraste** (light & dark).
+- **#5 Metadata** (`2bb3bc0`) : `generateMetadata` slug (titre = projet) + `metadata` /projets → titres uniques (2.4.2), testé.
+- **#7 Deps** (`3bd9e27`) : `axios` + `framer-motion` + `react-hot-toast` retirés ; `resend` + `sonner` ajoutés.
+- **#9 / #13 / Button / typo** (`fbeb9c5`) : `alt` logo hero, `@media prefers-reduced-motion` global, `Button type='button'` (hero), script `refrech` → `refresh`.
+- **axe final : 0 violation WCAG 2.1 AA** sur `/` (dark) et `/projets` (light), hors toast de dev.
+
+### ⏳ Reste (ton intervention / finitions)
+
+- **Resend** : coller `RESEND_API_KEY` + `CONTACT_TO_EMAIL` (+ `CONTACT_FROM_EMAIL`) dans `.env.local` → l'envoi réel s'active automatiquement.
+- **#6 Image hero** : recompresser (voir Annexe A) — toi, Affinity.
+- **#10 logo.svg** : 192 KB **sans `viewBox`** → optimiser (SVGO) + ajouter un viewBox (tâche asset, comme le hero ; le warning ratio next/image y est lié).
+- **#14 TS2344** : déplacer `getPageData` de `page.tsx` → `lib/queries` (cosmétique, le build passe).
+- **#11 cibles tactiles** / **#12 alts CMS** : finitions (mobile / contenu Hygraph).
+- Petit : `package-lock.json` **et** `yarn.lock` présents → n'en garder qu'un.
+
