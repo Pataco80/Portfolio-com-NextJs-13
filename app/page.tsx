@@ -1,8 +1,8 @@
 // Imports Components
-import { HeroSection } from '@/pages/home/hero-section'
-import { KnowTechs } from '@/pages/home/know-techs'
-import { HighlightedProjects } from '@/pages/home/highlighted-projects'
-import { WorkExperience } from '@/pages/home/work-experience'
+import { HeroSection } from '@/features/home/hero-section'
+import { KnowTechs } from '@/features/home/know-techs'
+import { HighlightedProjects } from '@/features/home/highlighted-projects'
+import { WorkExperience } from '@/features/home/work-experience'
 import { CircuitDivider } from '@/components/shared/circuit-divider'
 
 // Imports Queries

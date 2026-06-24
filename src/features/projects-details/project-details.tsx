@@ -1,12 +1,12 @@
 // Imports Components
-import { SectionTitle } from '@/components/shared/section-title'
+import { SectionTitle } from '@/features/section-title/section-title'
 import { Link } from '@/components/shared/link'
 import { Button } from '@/components/shared/button'
-import { TechBadge } from '@/components/shared/tech-badge'
-import { LuGithub, LuGlobe, LuArrowLeft } from 'react-icons/lu'
+import { TechBadge } from '@/features/tech-badge/tech-badge'
 
 // Imports types
 import { Project } from '@/types/projects'
+import { Icon } from '@/features/icons/icons'
 
 type ProjectDetailsProps = {
 	project: Project
@@ -38,19 +38,19 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 				<div className='flex flex-col items-center justify-center w-full gap-4 my-6 sm:my-12 sm:flex-row'>
 					{project.githubUrl && (
 						<Button href={project.githubUrl} external className='min-w-[180px]'>
-							<LuGithub size={20} />
+							<Icon name='github' size={20} />
 							View on GitHub
 						</Button>
 					)}
 					{project.liveProjectUrl && (
 						<Button href={project.liveProjectUrl} external className='min-w-[180px]'>
-							<LuGlobe size={20} />
+							<Icon name='globe' size={20} />
 							View Live Project
 						</Button>
 					)}
 				</div>
 				<Link href='/projects'>
-					<LuArrowLeft size={20} />
+					<Icon name='arrow-left' size={20} />
 					Voir tous les projets
 				</Link>
 			</div>

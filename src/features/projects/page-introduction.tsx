@@ -1,8 +1,7 @@
 // Imports Components
-import { SectionTitle } from '@/components/shared/section-title'
+import { SectionTitle } from '@/features/section-title/section-title'
 import { Link } from '@/components/shared/link'
-import { HiArrowNarrowLeft } from 'react-icons/hi'
-
+import { Icon } from '@/features/icons/icons'
 // Component
 export const PageIntroduction = () => {
 	// JSX Component
@@ -28,7 +27,7 @@ export const PageIntroduction = () => {
 					ils ont été créés, les technologies utilisées et les fonctionnalités mises en œuvre.
 				</p>
 				<Link href='/'>
-					<HiArrowNarrowLeft />
+					<Icon name='arrow-left' size={20} />
 					Retour à la page d&apos;Accueil
 				</Link>
 			</div>

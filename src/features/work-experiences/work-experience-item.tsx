@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { TechBadge } from '@/components/shared/tech-badge'
+import { TechBadge } from '@/features/tech-badge/tech-badge'
 import { WorkExperience } from '@/types/works-experience'
-import { RichText } from '@/components/shared/rich-text'
+import { RichText } from '@/features/rich-text/rich-text'
 
 type WorkExperienceItemProps = {
 	work: WorkExperience

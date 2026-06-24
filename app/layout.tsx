@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
 		<html lang='fr' suppressHydrationWarning className={`${inter.variable} ${plexMono.variable}`}>
-			<body>
+			<body suppressHydrationWarning>
 				<Providers>
 					<a
 						href='#contenu'

@@ -1,6 +1,6 @@
 // Imports Components
-import { PageIntroduction } from '@/components/shared/page-introduction'
-import { ProjectsList } from '@/pages/projects/projects-list'
+import { PageIntroduction } from '@/features/projects/page-introduction'
+import { ProjectsList } from '@/features/projects/projects-list'
 import { CircuitDivider } from '@/components/shared/circuit-divider'
 
 // Imports Queries

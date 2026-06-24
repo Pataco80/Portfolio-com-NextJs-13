@@ -1,8 +1,8 @@
 // Imports Components
 import { SectionLayout } from '@/components/layouts/section-layout'
 import { SectionBackdrop } from '@/components/shared/section-backdrop'
-import { SectionTitle } from '@/components/shared/section-title'
-import { KnowTechCard } from '@/pages/home/know-tech-card'
+import { SectionTitle } from '@/features/section-title/section-title'
+import { KnowTechCard } from '@/features/knowtecks/know-tech-card'
 
 // Imports types
 import { knownTech } from '@/types/projects'

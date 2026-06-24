@@ -3,24 +3,20 @@ import Link from 'next/link'
 
 // Imports Components
 import { Button } from '@/components/shared/button'
-import { HiArrowNarrowLeft } from 'react-icons/hi'
-
+import { Icon } from '@/features/icons/icons'
 // Component
 export default function NotFound() {
-  
-  // JSX Component
-  return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-9xl font-bold text-blue-ribbon">404</h1>
-      <h2 className="text-3xl font-medium text-pale-sky-400 mb-4">
-        Page non trouvée
-      </h2>
-      <Link href="/">
-        <Button>
-          <HiArrowNarrowLeft size={20} />
-          Retour à la page d&apos;Accueil
-        </Button>
-      </Link>
-    </div>
-  )
+	// JSX Component
+	return (
+		<div className='flex flex-col items-center justify-center h-screen'>
+			<h1 className='font-bold text-9xl text-blue-ribbon'>404</h1>
+			<h2 className='mb-4 text-3xl font-medium text-pale-sky-400'>Page non trouvée</h2>
+			<Link href='/'>
+				<Button>
+					<Icon name='arrow-left' size={20} className='mr-2' />
+					Retour à la page d&apos;Accueil
+				</Button>
+			</Link>
+		</div>
+	)
 }

@@ -38,3 +38,4 @@ next-env.d.ts
 # vs code
 .vscode/
 .history/
+localhost_*.json

@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from 'react'
 
 // Imports Components
 import { Button } from '@/components/shared/button'
-import { HiArrowNarrowUp } from 'react-icons/hi'
+import { Icon } from '@/features/icons/icons'
 
 // Component
 export const BackToTop = () => {
@@ -19,7 +19,7 @@ export const BackToTop = () => {
 		} else {
 			setVisible(false)
 		}
-	}, [visible])
+	}, [])
 
 	useEffect(() => {
 		// Listen for Scrolling Event
@@ -45,7 +45,7 @@ export const BackToTop = () => {
 			tabIndex={visible ? 0 : -1}
 			onClick={handleScroll}
 			className={`fixed bottom-6 right-6 p-2 shadow-button transition-all ${visible ? 'opacity-100 duration-300' : 'opacity-0 duration-500 pointer-events-none'} z-[200]`}>
-			<HiArrowNarrowUp size={20} />
+			<Icon name='arrow-up' size={20} />
 		</Button>
 	)
 }

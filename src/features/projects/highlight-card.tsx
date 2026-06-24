@@ -2,10 +2,9 @@
 import Image from 'next/image'
 
 // Imports Components
-import { TechBadge } from '@/components/shared/tech-badge'
+import { TechBadge } from '@/features/tech-badge/tech-badge'
 import { Link } from '@/components/shared/link'
-import { LuArrowRight } from 'react-icons/lu'
-
+import { Icon } from '@/features/icons/icons'
 // Imports types
 import { Project } from '@/types/projects'
 
@@ -45,7 +44,7 @@ export const HighlightCard = ({ project }: HighlightCardProps) => {
 				</ul>
 				<Link href={`/projects/${project.slug}`}>
 					Voir le projet
-					<LuArrowRight />
+					<Icon name='arrow-right' size={20} />
 				</Link>
 			</div>
 		</article>

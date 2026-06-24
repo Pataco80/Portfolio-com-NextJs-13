@@ -8,9 +8,9 @@ import { useEffect } from 'react'
 import { toast } from 'sonner'
 
 // Imports Components
-import { SectionTitle } from '@/components/shared/section-title'
+import { SectionTitle } from '@/features/section-title/section-title'
 import { Button } from '@/components/shared/button'
-import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Icon } from '@/features/icons/icons'
 import { sendContact } from '@/lib/actions/send-contact'
 
 // Form Schema (messages FR)
@@ -85,11 +85,7 @@ export const ContactForm = () => {
 	return (
 		<section className='px-4'>
 			<SectionTitle as='h2' title='Prenez contact avec moi' subtitle='contact' className='items-center text-center' />
-			<form
-				id='contact-form'
-				onSubmit={handleSubmit(onSubmit)}
-				noValidate
-				className='mt-12 w-full max-w-[450px] flex flex-col gap-5'>
+			<form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate className='mt-12 w-full max-w-[450px] flex flex-col gap-5'>
 				<div className='flex flex-col gap-1.5'>
 					<input
 						type='text'
@@ -143,7 +139,7 @@ export const ContactForm = () => {
 
 				<Button type='submit' disabled={isSubmitting} className='self-center mt-4'>
 					{isSubmitting ? 'Envoi…' : 'Contactez-moi'}
-					<HiArrowNarrowRight size={18} />
+					<Icon name='arrow-right' size={18} />
 				</Button>
 			</form>
 		</section>

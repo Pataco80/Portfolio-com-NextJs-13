@@ -1,12 +1,11 @@
 // Imports Components
 import { SectionLayout } from '@/components/layouts/section-layout'
 import { SectionBackdrop } from '@/components/shared/section-backdrop'
-import { SectionTitle } from '@/components/shared/section-title'
+import { SectionTitle } from '@/features/section-title/section-title'
 import { DividerHorizontal } from '@/components/shared/divider-line'
-import { HighlightCard } from '@/pages/home/highlight-card'
+import { HighlightCard } from '@/features/projects/highlight-card'
 import { Link } from '@/components/shared/link'
-import { LuArrowRight } from 'react-icons/lu'
-
+import { Icon } from '@/features/icons/icons'
 // Imports types
 import { Project } from '@/types/projects'
 import { SurfaceTone } from '@/types/page-info'
@@ -36,7 +35,7 @@ export const HighlightedProjects = ({ projects, surface }: HighlightedProjectsPr
 				<span className='text-muted-foreground'>Si intéressé ?</span>
 				<Link className='inline-flex' href='/projects'>
 					Voir tous les projets
-					<LuArrowRight />
+					<Icon name='arrow-right' size={20} />
 				</Link>
 			</p>
 		</SectionLayout>

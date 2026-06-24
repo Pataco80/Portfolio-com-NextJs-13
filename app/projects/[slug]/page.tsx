@@ -1,5 +1,5 @@
-import { ProjectDetails } from '@/pages/projects-details/project-details'
-import { ProjectSections } from '@/pages/projects-details/project-sections'
+import { ProjectDetails } from '@/features/projects-details/project-details'
+import { ProjectSections } from '@/features/projects-details/project-sections'
 import { CircuitDivider } from '@/components/shared/circuit-divider'
 import { ProjectPageData } from '@/types/page-info'
 import { fetchHygraphQuery } from '@/lib/fetch-hygraph-query'

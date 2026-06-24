@@ -1,5 +1,5 @@
 // Imports Components
-import { ProjectCard } from '@/pages/projects/project-card'
+import { ProjectCard } from '@/features/projects/project-card'
 import { SectionLayout } from '@/components/layouts/section-layout'
 import { SectionBackdrop } from '@/components/shared/section-backdrop'
 
