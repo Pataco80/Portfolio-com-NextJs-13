@@ -22,10 +22,6 @@ export const metadata: Metadata = {
 	title: 'DWDeveloppement',
 	description: 'Web Developpeur',
 	manifest: '/manifest.webmanifest',
-	icons: {
-		icon: '/favicon.ico',
-		apple: '/icons/icon-512.png',
-	},
 	appleWebApp: {
 		title: 'DWDev',
 		capable: true,
