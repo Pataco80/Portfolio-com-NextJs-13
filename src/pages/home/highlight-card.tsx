@@ -18,7 +18,7 @@ type HighlightCardProps = {
 export const HighlightCard = ({ project }: HighlightCardProps) => {
 	// JSX Component
 	return (
-		<article className='flex flex-col lg:flex-row gap-6 lg:gap-12'>
+		<article className='flex flex-col gap-6 lg:flex-row lg:gap-12'>
 			<div className='w-full h-full lg:w-[420px]'>
 				<Image
 					src={project.thumbnail.url}
@@ -29,11 +29,11 @@ export const HighlightCard = ({ project }: HighlightCardProps) => {
 				/>
 			</div>
 			<div className='flex-1 lg:py-5'>
-				<h3 className='flex items-center gap-3 font-medium text-lg text-foreground'>
-					<Image src='/images/icons/project-title-icon.svg' alt='' width={20} height={20} />
+				<h3 className='flex items-center gap-3 text-lg font-medium text-foreground'>
+					<Image src='/images/icons/icon-react.png' alt='' width={30} height={30} />
 					{project.title}
 				</h3>
-				<p className='text-muted-foreground my-6'>{project.shortDescription}</p>
+				<p className='my-6 text-muted-foreground'>{project.shortDescription}</p>
 				<ul className='flex flex-wrap gap-x-2 gap-y-3 mb-8 lg:max-w-[350px]'>
 					{project.technologies.map((tech) => {
 						return (
