@@ -1,45 +1,51 @@
 {
-	"name": "portfolio-tutorial-2023",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"clean": "rm -rf .next",
-		"refresh": "rm -rf .next && next dev",
-		"rebuild": "rm -rf .next && next start"
-	},
-	"dependencies": {
-		"@graphcms/rich-text-react-renderer": "0.6.1",
-		"@graphcms/rich-text-types": "^0.5.1",
-		"@hookform/resolvers": "3.0.1",
-		"@rocketseat/eslint-config": "1.2.0",
-		"@types/node": "18.15.11",
-		"@types/react": "18.0.33",
-		"@types/react-dom": "18.0.11",
-		"autoprefixer": "10.4.14",
-		"clsx": "1.2.1",
-		"date-fns": "2.29.3",
-		"eslint": "8.37.0",
-		"eslint-config-next": "13.3.0",
-		"lucide-react": "^0.577.0",
-		"motion": "^12.40.0",
-		"next": "^15.1.0",
-		"next-themes": "^0.4.6",
-		"postcss": "8.4.21",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"react-hook-form": "7.43.9",
-		"resend": "^6.14.0",
-		"sonner": "^2.0.7",
-		"tailwind-merge": "1.12.0",
-		"tailwindcss": "3.3.1",
-		"typescript": "5.0.4",
-		"zod": "3.21.4"
-	},
-	"devDependencies": {
-		"prettier": "^3.3.3"
-	}
+  "name": "portfolio-tutorial-2023",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next",
+    "refresh": "rm -rf .next && next dev",
+    "rebuild": "rm -rf .next && next start"
+  },
+  "dependencies": {
+    "@graphcms/rich-text-react-renderer": "0.6.1",
+    "@graphcms/rich-text-types": "^0.5.1",
+    "@hookform/resolvers": "3.0.1",
+    "@rocketseat/eslint-config": "1.2.0",
+    "@types/node": "18.15.11",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "10.4.14",
+    "clsx": "1.2.1",
+    "date-fns": "2.29.3",
+    "eslint": "8.37.0",
+    "eslint-config-next": "16.2.9",
+    "lucide-react": "^0.577.0",
+    "motion": "^12.40.0",
+    "next": "16.2.9",
+    "next-themes": "^0.4.6",
+    "postcss": "8.4.21",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "react-hook-form": "7.43.9",
+    "resend": "^6.14.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "1.12.0",
+    "tailwindcss": "3.3.1",
+    "typescript": "5.0.4",
+    "zod": "3.21.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.17",
+      "@types/react-dom": "19.2.3"
+    }
+  }
 }
