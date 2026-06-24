@@ -30,7 +30,7 @@ export const HighlightCard = ({ project }: HighlightCardProps) => {
 			</div>
 			<div className='flex-1 lg:py-5'>
 				<h3 className='flex items-center gap-3 text-lg font-medium text-foreground'>
-					<Image src='/images/icons/icon-react.png' alt='' width={30} height={30} />
+					<Image src='/icons/icon-react.png' alt='' width={30} height={30} />
 					{project.title}
 				</h3>
 				<p className='my-6 text-muted-foreground'>{project.shortDescription}</p>

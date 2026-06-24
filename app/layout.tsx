@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
@@ -21,9 +21,20 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
 	title: 'DWDeveloppement',
 	description: 'Web Developpeur',
+	manifest: '/manifest.webmanifest',
 	icons: {
 		icon: '/favicon.ico',
+		apple: '/icons/icon-512.png',
 	},
+	appleWebApp: {
+		title: 'DWDev',
+		capable: true,
+		statusBarStyle: 'black-translucent',
+	},
+}
+
+export const viewport: Viewport = {
+	themeColor: '#0042C7',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

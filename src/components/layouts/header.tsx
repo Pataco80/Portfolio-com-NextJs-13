@@ -26,7 +26,7 @@ export const Header = () => {
 		<header id='header' className='absolute top-0 w-full z-10 h-24 flex justify-between items-center'>
 			<div className='container flex items-center justify-between'>
 				<Link href='/' className='inline-flex rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-ribbon-300 focus-visible:ring-offset-2 focus-visible:ring-offset-pale-sky-900'>
-					<Image src='/favicons/logo-dwdevelopment.svg' alt='Logo DWDeveloppement' width={50} height={50} />
+					<Image src='/icons/logo.svg' alt='Logo DWDeveloppement' width={50} height={50} />
 				</Link>
 				<div className='flex items-center gap-6'>
 					<nav>
