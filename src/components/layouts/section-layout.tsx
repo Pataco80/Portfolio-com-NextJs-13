@@ -49,7 +49,7 @@ export const SectionLayout = ({
 		<Tag
 			className={cn(
 				'relative',
-				backdrop && 'overflow-hidden',
+				!!backdrop && 'overflow-hidden',
 				{
 					'bg-background text-foreground': variant === 'default',
 					'bg-alt-section text-foreground': variant === 'alt-section',
